@@ -189,25 +189,8 @@ continue
         jsr waitkey
 
 
-;@xxx1
-;        ldx fi_spr_ctr
-;        lda fade_in_colors_sprite,x
-;        sta $d027
-
-;        jsr rloop2
-
-;        inc fi_spr_ctr
-;        lda fi_spr_ctr
-;        cmp #13
-;        bne @xxx1
-
-
-
-
-
         ldy #1
         jsr printstartmsg
-
 
         lda #0
         cmp $d012
@@ -716,40 +699,6 @@ do_vis
         sta $403+520
         
 
-;        lda SWVARS+41
-;        and #%11110000
-;        ror
-;        ror
-;        ror
-;        ror
-;        tax
-;        lda bin2hextbl,x
-;        sta $402+720
-;        lda SWVARS+41
-;        and #%00001111
-;        tax
-;        lda bin2hextbl,x
-;        sta $403+720
-
-
-;        lda SWVARS+48
-;        and #%11110000
-;        ror
-;        ror
-;        ror
-;        ror
-;        tax
-;        lda bin2hextbl,x
-;        sta $402+800
-;        lda SWVARS+48
-;        and #%00001111
-;        tax
-;        lda bin2hextbl,x
-;        sta $403+800
-
-
-
-
 ; 37 = curr pattern
 
         lda SWVARS+43 
@@ -804,10 +753,6 @@ do_vis
         rts
 
 
-
-
-
-        
 
 ; --- SOUNDVIS ---
 ;varpos=PLAYERADDR+$21 ;variables start here - must be fixed address from now on...
@@ -1277,34 +1222,7 @@ move_sprites2
                 bne @l3
                 lda #0
                 sta sprmov_yoffs2
-                ;jmp @l3
-
-@check          
-;                cmp #40
-;                beq @doitt
-;                cmp #84
-;                beq @doitt
-
-;                jmp @l3
-;@doitt
-;                pha
-
-;                lda #0
-;                cmp SPRPRIORITY
-;                beq @itszero
-;                lda #$00
-;                sta SPRPRIORITY
-;                jmp @tol3
-
-
-;@itszero        lda #$ff
-;                sta SPRPRIORITY
-;                lda #0
-
-;@tol3           pla
-
-
-
+                
 
 
 @l3             tax
@@ -1578,7 +1496,6 @@ scroller
                 text 'goto97'
                 byte 0,80
 
-               ;text '  the endpart music for the a4 bcc#10 demo '
                 text '  another sound from our a4 bcc#10 demo  '
                 
                 byte 80,0
@@ -1663,10 +1580,6 @@ logo_scroll_lr
 
 
 logo_color_ani
-;        lda FRAMECTR      
-;        cmp #8
-;        bcc @do_it
-;        rts
 
         lda #1
         cmp DO1
@@ -1693,41 +1606,6 @@ logo_color_ani
 
 @cont3clear
         pla
-;        cmp #0
-;        beq @end
-
-;        sta @last_scrn        
-
-        tax
-
-;        jmp @gooon
-
-
-;        
-
-
-
-;@end    ;lda @last_scrn
-;        ;cmp #0
-;        ;beq @clear
-
-;        inc @stay_ctr
-;        lda @stay_ctr
-;        cmp #4
-;        beq @doclear
-;        
-;        ldx @last_scrn
-;        jmp @gooon
-;        
-
-;@doclear lda #0
-;        sta @stay_ctr
-;        sta @last_scrn
-
-;@clear
-;        ldx #0
-
-;@gooon
 
         txa        
         asl
@@ -1742,31 +1620,6 @@ logo_color_ani
 @stay_ctr byte 0
 @last_scrn byte 0
 @disp_mask byte 0
-
-
-;        ldx DRL_ani_ctr
-;        inx
-;        cpx #7
-;        beq @end
-;        stx DRL_ani_ctr
-;        txa
-;        asl
-;        tax
-;        lda DRL_ANI_TBL,x
-;        sta drl_lda_logo_color+1
-;        inx
-;        lda DRL_ANI_TBL,x
-;        sta drl_lda_logo_color+2
-
-;        rts
-
-;@end     
-;        lda #$ff
-;        sta DRL_ani_ctr
-;        rts
-
-
-
 
 
 
@@ -1875,16 +1728,6 @@ fade_msgs
 
 
 draw_logo
-;        lda #$04
-;        sta drl_sta_0400+2
-;        lda Logo_X
-;        sta drl_sta_0400+1
-
-;        lda #$d8
-;        sta drl_sta_d800+2
-;        lda Logo_X
-;        sta drl_sta_d800+1
-
 
         ldx #0
         
@@ -2042,9 +1885,6 @@ scrollcolors
  
  byte 11, 11, 4, 4, 10, 10, 7, 7, 1, 1                  ; 10
  byte 1, 1, 7, 7, 10, 10, 4, 4, 11, 11                  ; 10
-
-
-
 
 
 
