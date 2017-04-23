@@ -1,0 +1,593 @@
+
+re|scan 0.1 >-------------------------------------------------------------------
+                                      reverse engineering binary file scanner  <
+^-------------------------------------------------------------------------------
+| logfile: 'nop_blocks.log', Mi Dez 14 2011 22:15:34
+^------------------------------------------------------------------------------^
+[info   ] attemting to scan 1 files
+[info   ] scanning file #0: '..\run\ls'
+[info   ] successfully loaded file: '..\run\ls'
+[info   ] detected file type: elf32
+[info   ] elf32: starting to analyze
+[info   ] entry point at 0x8049a30
+[info   ] elf32: analysis finished
+[info   ] # of acss results: 13
+[info   ] acss disassemble:
+// filter example 4
+// nop blocks
+
+block { size=150, threshold=10%; };
+
+1 x insn {
+    type == nop;
+};
+
+[info   ] disassembling acss result #1/13: 0x8049a48 - 0x8049a5f
+[info   ] matched insn count: 15, matched byte count: 15
+[info   ] printing disassembly of result: 
+
+00001a48 08049a48 90                              nop 
+00001a49 08049a49 f9                              stc 
+00001a4a 08049a4a 04 08                           add al, 0x08
+00001a4c 08049a4c e8 2f fb ff ff                  call __libc_start_main
+00001a51 08049a51 f4                              hlt 
+00001a52 08049a52 90                              nop 
+00001a53 08049a53 90                              nop 
+00001a54 08049a54 90                              nop 
+00001a55 08049a55 90                              nop 
+00001a56 08049a56 90                              nop 
+00001a57 08049a57 90                              nop 
+00001a58 08049a58 90                              nop 
+00001a59 08049a59 90                              nop 
+00001a5a 08049a5a 90                              nop 
+00001a5b 08049a5b 90                              nop 
+00001a5c 08049a5c 90                              nop 
+00001a5d 08049a5d 90                              nop 
+00001a5e 08049a5e 90                              nop 
+00001a5f 08049a5f 90                              nop 
+
+[info   ] disassembling acss result #2/13: 0x80539ca - 0x8053a1f
+[info   ] matched insn count: 16, matched byte count: 16
+[info   ] printing disassembly of result: 
+
+0000b9ca 080539ca 90                              nop 
+0000b9cb 080539cb 90                              nop 
+0000b9cc 080539cc 90                              nop 
+0000b9cd 080539cd 90                              nop 
+0000b9ce 080539ce 90                              nop 
+0000b9cf 080539cf 90                              nop 
+0000b9d0 080539d0 55                              push ebp
+0000b9d1 080539d1 89 e5                           mov ebp, esp
+0000b9d3 080539d3 53                              push ebx
+0000b9d4 080539d4 83 ec 24                        sub esp, 0x24
+0000b9d7 080539d7 8b 5d 08                        mov ebx, [ebp+0x8]
+0000b9da 080539da c7 04 24 00 00 00 00            mov [esp], 0x00000000
+0000b9e1 080539e1 89 5c 24 04                     mov [esp+0x4], ebx
+0000b9e5 080539e5 e8 26 5e ff ff                  call clock_gettime
+0000b9ea 080539ea 85 c0                           test eax, eax
+0000b9ec 080539ec 74 22                           jz 0x08053A10
+0000b9ee 080539ee 8d 45 f0                        lea eax, [ebp-0x10]
+0000b9f1 080539f1 c7 44 24 04 00 00 00 00         mov [esp+0x4], 0x00000000
+0000b9f9 080539f9 89 04 24                        mov [esp], eax
+0000b9fc 080539fc e8 1f 5c ff ff                  call gettimeofday
+0000ba01 08053a01 8b 45 f0                        mov eax, [ebp-0x10]
+0000ba04 08053a04 89 03                           mov [ebx], eax
+0000ba06 08053a06 69 45 f4 e8 03 00 00            imul eax, [ebp-0xC], 0x000003E8
+0000ba0d 08053a0d 89 43 04                        mov [ebx+0x4], eax
+0000ba10 08053a10 83 c4 24                        add esp, 0x24
+0000ba13 08053a13 5b                              pop ebx
+0000ba14 08053a14 5d                              pop ebp
+0000ba15 08053a15 c3                              ret 
+0000ba16 08053a16 90                              nop 
+0000ba17 08053a17 90                              nop 
+0000ba18 08053a18 90                              nop 
+0000ba19 08053a19 90                              nop 
+0000ba1a 08053a1a 90                              nop 
+0000ba1b 08053a1b 90                              nop 
+0000ba1c 08053a1c 90                              nop 
+0000ba1d 08053a1d 90                              nop 
+0000ba1e 08053a1e 90                              nop 
+0000ba1f 08053a1f 90                              nop 
+
+[info   ] disassembling acss result #3/13: 0x8058c33 - 0x8058c7f
+[info   ] matched insn count: 17, matched byte count: 17
+[info   ] printing disassembly of result: 
+
+00010c33 08058c33 90                              nop 
+00010c34 08058c34 90                              nop 
+00010c35 08058c35 90                              nop 
+00010c36 08058c36 90                              nop 
+00010c37 08058c37 90                              nop 
+00010c38 08058c38 90                              nop 
+00010c39 08058c39 90                              nop 
+00010c3a 08058c3a 90                              nop 
+00010c3b 08058c3b 90                              nop 
+00010c3c 08058c3c 90                              nop 
+00010c3d 08058c3d 90                              nop 
+00010c3e 08058c3e 90                              nop 
+00010c3f 08058c3f 90                              nop 
+00010c40 08058c40 55                              push ebp
+00010c41 08058c41 89 e5                           mov ebp, esp
+00010c43 08058c43 83 ec 08                        sub esp, 0x08
+00010c46 08058c46 89 74 24 04                     mov [esp+0x4], esi
+00010c4a 08058c4a 8b 75 1c                        mov esi, [ebp+0x1C]
+00010c4d 08058c4d 8b 45 10                        mov eax, [ebp+0x10]
+00010c50 08058c50 89 1c 24                        mov [esp], ebx
+00010c53 08058c53 8b 5d 14                        mov ebx, [ebp+0x14]
+00010c56 08058c56 8b 55 08                        mov edx, [ebp+0x8]
+00010c59 08058c59 89 75 14                        mov [ebp+0x14], esi
+00010c5c 08058c5c 8b 75 18                        mov esi, [ebp+0x18]
+00010c5f 08058c5f 8b 4d 0c                        mov ecx, [ebp+0xC]
+00010c62 08058c62 89 45 08                        mov [ebp+0x8], eax
+00010c65 08058c65 31 c0                           xor eax, eax
+00010c67 08058c67 89 5d 0c                        mov [ebp+0xC], ebx
+00010c6a 08058c6a 8b 1c 24                        mov ebx, [esp]
+00010c6d 08058c6d 89 75 10                        mov [ebp+0x10], esi
+00010c70 08058c70 8b 74 24 04                     mov esi, [esp+0x4]
+00010c74 08058c74 89 ec                           mov esp, ebp
+00010c76 08058c76 5d                              pop ebp
+00010c77 08058c77 e9 14 e5 ff ff                  jmp 0x08057190
+00010c7c 08058c7c 90                              nop 
+00010c7d 08058c7d 90                              nop 
+00010c7e 08058c7e 90                              nop 
+00010c7f 08058c7f 90                              nop 
+
+[info   ] disassembling acss result #4/13: 0x8049ae3 - 0x8049b4f
+[info   ] matched insn count: 15, matched byte count: 16
+[info   ] printing disassembly of result: 
+
+00001ae3 08049ae3 90                              nop 
+00001ae4 08049ae4 90                              nop 
+00001ae5 08049ae5 90                              nop 
+00001ae6 08049ae6 90                              nop 
+00001ae7 08049ae7 90                              nop 
+00001ae8 08049ae8 90                              nop 
+00001ae9 08049ae9 90                              nop 
+00001aea 08049aea 90                              nop 
+00001aeb 08049aeb 90                              nop 
+00001aec 08049aec 90                              nop 
+00001aed 08049aed 90                              nop 
+00001aee 08049aee 90                              nop 
+00001aef 08049aef 90                              nop 
+00001af0 08049af0 55                              push ebp
+00001af1 08049af1 89 e5                           mov ebp, esp
+00001af3 08049af3 83 ec 18                        sub esp, 0x18
+00001af6 08049af6 8b 45 08                        mov eax, [ebp+0x8]
+00001af9 08049af9 8b 4d 0c                        mov ecx, [ebp+0xC]
+00001afc 08049afc 8b 50 04                        mov edx, [eax+0x4]
+00001aff 08049aff 8b 00                           mov eax, [eax]
+00001b01 08049b01 89 4c 24 08                     mov [esp+0x8], ecx
+00001b05 08049b05 c7 44 24 0c 00 00 00 00         mov [esp+0xC], 0x00000000
+00001b0d 08049b0d 89 54 24 04                     mov [esp+0x4], edx
+00001b11 08049b11 89 04 24                        mov [esp], eax
+00001b14 08049b14 e8 d7 04 01 00                  call 0x08059FF0
+00001b19 08049b19 c9                              leave 
+00001b1a 08049b1a c3                              ret 
+00001b1b 08049b1b 90                              nop 
+00001b1c 08049b1c 8d 74 26 00                     lea esi, [esi]
+00001b20 08049b20 55                              push ebp
+00001b21 08049b21 31 c0                           xor eax, eax
+00001b23 08049b23 89 e5                           mov ebp, esp
+00001b25 08049b25 83 ec 08                        sub esp, 0x08
+00001b28 08049b28 89 74 24 04                     mov [esp+0x4], esi
+00001b2c 08049b2c 8b 75 08                        mov esi, [ebp+0x8]
+00001b2f 08049b2f 89 1c 24                        mov [esp], ebx
+00001b32 08049b32 8b 5d 0c                        mov ebx, [ebp+0xC]
+00001b35 08049b35 8b 16                           mov edx, [esi]
+00001b37 08049b37 8b 4e 04                        mov ecx, [esi+0x4]
+00001b3a 08049b3a 33 4b 04                        xor ecx, [ebx+0x4]
+00001b3d 08049b3d 33 13                           xor edx, [ebx]
+00001b3f 08049b3f 09 d1                           or ecx, edx
+00001b41 08049b41 74 0d                           jz 0x08049B50
+00001b43 08049b43 8b 1c 24                        mov ebx, [esp]
+00001b46 08049b46 8b 74 24 04                     mov esi, [esp+0x4]
+00001b4a 08049b4a 89 ec                           mov esp, ebp
+00001b4c 08049b4c 5d                              pop ebp
+00001b4d 08049b4d c3                              ret 
+00001b4e 08049b4e 66 90                           nop 
+
+[info   ] disassembling acss result #5/13: 0x8053826 - 0x8053887
+[info   ] matched insn count: 16, matched byte count: 17
+[info   ] printing disassembly of result: 
+
+0000b826 08053826 66 90                           nop 
+0000b828 08053828 83 c3 01                        add ebx, 0x01
+0000b82b 0805382b 80 3b 2f                        cmp [ebx], 0x2F
+0000b82e 0805382e 0f 85 76 ff ff ff               jnz 0x080537AA
+0000b834 08053834 83 c3 01                        add ebx, 0x01
+0000b837 08053837 80 3b 2f                        cmp [ebx], 0x2F
+0000b83a 0805383a 0f 85 6a ff ff ff               jnz 0x080537AA
+0000b840 08053840 eb e6                           jmp 0x08053828
+0000b842 08053842 90                              nop 
+0000b843 08053843 90                              nop 
+0000b844 08053844 90                              nop 
+0000b845 08053845 90                              nop 
+0000b846 08053846 90                              nop 
+0000b847 08053847 90                              nop 
+0000b848 08053848 90                              nop 
+0000b849 08053849 90                              nop 
+0000b84a 0805384a 90                              nop 
+0000b84b 0805384b 90                              nop 
+0000b84c 0805384c 90                              nop 
+0000b84d 0805384d 90                              nop 
+0000b84e 0805384e 90                              nop 
+0000b84f 0805384f 90                              nop 
+0000b850 08053850 55                              push ebp
+0000b851 08053851 89 e5                           mov ebp, esp
+0000b853 08053853 83 ec 28                        sub esp, 0x28
+0000b856 08053856 89 75 f8                        mov [ebp-0x8], esi
+0000b859 08053859 8b 45 08                        mov eax, [ebp+0x8]
+0000b85c 0805385c 8b 75 0c                        mov esi, [ebp+0xC]
+0000b85f 0805385f 89 5d f4                        mov [ebp-0xC], ebx
+0000b862 08053862 89 7d fc                        mov [ebp-0x4], edi
+0000b865 08053865 89 04 24                        mov [esp], eax
+0000b868 08053868 89 74 24 04                     mov [esp+0x4], esi
+0000b86c 0805386c e8 af 5f ff ff                  call getfilecon
+0000b871 08053871 85 c0                           test eax, eax
+0000b873 08053873 74 43                           jz 0x080538B8
+0000b875 08053875 83 f8 0a                        cmp eax, 0x0A
+0000b878 08053878 74 0e                           jz 0x08053888
+0000b87a 0805387a 8b 5d f4                        mov ebx, [ebp-0xC]
+0000b87d 0805387d 8b 75 f8                        mov esi, [ebp-0x8]
+0000b880 08053880 8b 7d fc                        mov edi, [ebp-0x4]
+0000b883 08053883 89 ec                           mov esp, ebp
+0000b885 08053885 5d                              pop ebp
+0000b886 08053886 c3                              ret 
+0000b887 08053887 90                              nop 
+
+[info   ] disassembling acss result #6/13: 0x805263c - 0x80526bf
+[info   ] matched insn count: 15, matched byte count: 15
+[info   ] printing disassembly of result: 
+
+0000a63c 0805263c 90                              nop 
+0000a63d 0805263d 6e                              outs dl, ds:[esi]
+0000a63f 0805263f ff 8b 55 e0 85 c0               dec [ebx-0x3F7A1FAB]
+0000a645 08052645 89 c3                           mov ebx, eax
+0000a647 08052647 74 57                           jz 0x080526A0
+0000a649 08052649 8b 45 e4                        mov eax, [ebp-0x1C]
+0000a64c 0805264c 89 07                           mov [edi], eax
+0000a64e 0805264e 8b 45 14                        mov eax, [ebp+0x14]
+0000a651 08052651 89 7c 24 0c                     mov [esp+0xC], edi
+0000a655 08052655 89 74 24 08                     mov [esp+0x8], esi
+0000a659 08052659 89 5c 24 04                     mov [esp+0x4], ebx
+0000a65d 0805265d 89 44 24 14                     mov [esp+0x14], eax
+0000a661 08052661 8b 45 10                        mov eax, [ebp+0x10]
+0000a664 08052664 89 44 24 10                     mov [esp+0x10], eax
+0000a668 08052668 8b 45 08                        mov eax, [ebp+0x8]
+0000a66b 0805266b 89 04 24                        mov [esp], eax
+0000a66e 0805266e e8 7d fb ff ff                  call 0x080521F0
+0000a673 08052673 83 f8 ff                        cmp eax, 0xFF
+0000a676 08052676 75 b0                           jnz 0x08052628
+0000a678 08052678 89 1c 24                        mov [esp], ebx
+0000a67b 0805267b e8 c0 6f ff ff                  call free
+0000a680 08052680 83 c4 3c                        add esp, 0x3C
+0000a683 08052683 31 c0                           xor eax, eax
+0000a685 08052685 5b                              pop ebx
+0000a686 08052686 5e                              pop esi
+0000a687 08052687 5f                              pop edi
+0000a688 08052688 5d                              pop ebp
+0000a689 08052689 c3                              ret 
+0000a68a 0805268a 8d b6 00 00 00 00               lea esi, [esi]
+0000a690 08052690 83 c4 3c                        add esp, 0x3C
+0000a693 08052693 89 d8                           mov eax, ebx
+0000a695 08052695 5b                              pop ebx
+0000a696 08052696 5e                              pop esi
+0000a697 08052697 5f                              pop edi
+0000a698 08052698 5d                              pop ebp
+0000a699 08052699 c3                              ret 
+0000a69a 0805269a 8d b6 00 00 00 00               lea esi, [esi]
+0000a6a0 080526a0 89 14 24                        mov [esp], edx
+0000a6a3 080526a3 e8 98 6f ff ff                  call free
+0000a6a8 080526a8 83 c4 3c                        add esp, 0x3C
+0000a6ab 080526ab 31 c0                           xor eax, eax
+0000a6ad 080526ad 5b                              pop ebx
+0000a6ae 080526ae 5e                              pop esi
+0000a6af 080526af 5f                              pop edi
+0000a6b0 080526b0 5d                              pop ebp
+0000a6b1 080526b1 c3                              ret 
+0000a6b2 080526b2 90                              nop 
+0000a6b3 080526b3 90                              nop 
+0000a6b4 080526b4 90                              nop 
+0000a6b5 080526b5 90                              nop 
+0000a6b6 080526b6 90                              nop 
+0000a6b7 080526b7 90                              nop 
+0000a6b8 080526b8 90                              nop 
+0000a6b9 080526b9 90                              nop 
+0000a6ba 080526ba 90                              nop 
+0000a6bb 080526bb 90                              nop 
+0000a6bc 080526bc 90                              nop 
+0000a6bd 080526bd 90                              nop 
+0000a6be 080526be 90                              nop 
+0000a6bf 080526bf 90                              nop 
+
+[info   ] disassembling acss result #7/13: 0x8054177 - 0x80541f7
+[info   ] matched insn count: 16, matched byte count: 17
+[info   ] printing disassembly of result: 
+
+0000c177 08054177 90                              nop 
+0000c178 08054178 83 c4 1c                        add esp, 0x1C
+0000c17b 0805417b 31 c0                           xor eax, eax
+0000c17d 0805417d 5b                              pop ebx
+0000c17e 0805417e 5e                              pop esi
+0000c17f 0805417f 5f                              pop edi
+0000c180 08054180 5d                              pop ebp
+0000c181 08054181 c3                              ret 
+0000c182 08054182 8b 00                           mov eax, [eax]
+0000c184 08054184 83 c4 1c                        add esp, 0x1C
+0000c187 08054187 5b                              pop ebx
+0000c188 08054188 5e                              pop esi
+0000c189 08054189 5f                              pop edi
+0000c18a 0805418a 5d                              pop ebp
+0000c18b 0805418b c3                              ret 
+0000c18c 0805418c e8 5f 52 ff ff                  call abort
+0000c191 08054191 eb 0d                           jmp 0x080541A0
+0000c193 08054193 90                              nop 
+0000c194 08054194 90                              nop 
+0000c195 08054195 90                              nop 
+0000c196 08054196 90                              nop 
+0000c197 08054197 90                              nop 
+0000c198 08054198 90                              nop 
+0000c199 08054199 90                              nop 
+0000c19a 0805419a 90                              nop 
+0000c19b 0805419b 90                              nop 
+0000c19c 0805419c 90                              nop 
+0000c19d 0805419d 90                              nop 
+0000c19e 0805419e 90                              nop 
+0000c19f 0805419f 90                              nop 
+0000c1a0 080541a0 55                              push ebp
+0000c1a1 080541a1 89 e5                           mov ebp, esp
+0000c1a3 080541a3 8b 45 08                        mov eax, [ebp+0x8]
+0000c1a6 080541a6 8b 55 08                        mov edx, [ebp+0x8]
+0000c1a9 080541a9 57                              push edi
+0000c1aa 080541aa 56                              push esi
+0000c1ab 080541ab 8b 75 0c                        mov esi, [ebp+0xC]
+0000c1ae 080541ae 53                              push ebx
+0000c1af 080541af 8b 38                           mov edi, [eax]
+0000c1b1 080541b1 31 c0                           xor eax, eax
+0000c1b3 080541b3 3b 7a 04                        cmp edi, [edx+0x4]
+0000c1b6 080541b6 8b 5d 10                        mov ebx, [ebp+0x10]
+0000c1b9 080541b9 73 3d                           jnc 0x080541F8
+0000c1bb 080541bb 8b 0f                           mov ecx, [edi]
+0000c1bd 080541bd 85 c9                           test ecx, ecx
+0000c1bf 080541bf 74 2a                           jz 0x080541EB
+0000c1c1 080541c1 85 ff                           test edi, edi
+0000c1c3 080541c3 74 26                           jz 0x080541EB
+0000c1c5 080541c5 39 c3                           cmp ebx, eax
+0000c1c7 080541c7 76 2f                           jbe 0x080541F8
+0000c1c9 080541c9 89 fa                           mov edx, edi
+0000c1cb 080541cb 90                              nop 
+0000c1cc 080541cc 8d 74 26 00                     lea esi, [esi]
+0000c1d0 080541d0 eb 0c                           jmp 0x080541DE
+0000c1d2 080541d2 8d b6 00 00 00 00               lea esi, [esi]
+0000c1d8 080541d8 39 c3                           cmp ebx, eax
+0000c1da 080541da 76 1c                           jbe 0x080541F8
+0000c1dc 080541dc 8b 0a                           mov ecx, [edx]
+0000c1de 080541de 8b 52 04                        mov edx, [edx+0x4]
+0000c1e1 080541e1 89 0c 86                        mov [esi+eax*4], ecx
+0000c1e4 080541e4 83 c0 01                        add eax, 0x01
+0000c1e7 080541e7 85 d2                           test edx, edx
+0000c1e9 080541e9 75 ed                           jnz 0x080541D8
+0000c1eb 080541eb 8b 55 08                        mov edx, [ebp+0x8]
+0000c1ee 080541ee 83 c7 08                        add edi, 0x08
+0000c1f1 080541f1 39 7a 04                        cmp [edx+0x4], edi
+0000c1f4 080541f4 77 c5                           ja 0x080541BB
+0000c1f6 080541f6 66 90                           nop 
+
+[info   ] disassembling acss result #8/13: 0x8054463 - 0x80544a7
+[info   ] matched insn count: 14, matched byte count: 15
+[info   ] printing disassembly of result: 
+
+0000c463 08054463 90                              nop 
+0000c464 08054464 90                              nop 
+0000c465 08054465 90                              nop 
+0000c466 08054466 90                              nop 
+0000c467 08054467 90                              nop 
+0000c468 08054468 90                              nop 
+0000c469 08054469 90                              nop 
+0000c46a 0805446a 90                              nop 
+0000c46b 0805446b 90                              nop 
+0000c46c 0805446c 90                              nop 
+0000c46d 0805446d 90                              nop 
+0000c46e 0805446e 90                              nop 
+0000c46f 0805446f 90                              nop 
+0000c470 08054470 55                              push ebp
+0000c471 08054471 89 e5                           mov ebp, esp
+0000c473 08054473 57                              push edi
+0000c474 08054474 56                              push esi
+0000c475 08054475 53                              push ebx
+0000c476 08054476 83 ec 1c                        sub esp, 0x1C
+0000c479 08054479 8b 75 08                        mov esi, [ebp+0x8]
+0000c47c 0805447c 8b 7e 20                        mov edi, [esi+0x20]
+0000c47f 0805447f 85 ff                           test edi, edi
+0000c481 08054481 74 40                           jz 0x080544C3
+0000c483 08054483 8b 5e 10                        mov ebx, [esi+0x10]
+0000c486 08054486 85 db                           test ebx, ebx
+0000c488 08054488 74 39                           jz 0x080544C3
+0000c48a 0805448a 8b 3e                           mov edi, [esi]
+0000c48c 0805448c 3b 7e 04                        cmp edi, [esi+0x4]
+0000c48f 0805448f 73 68                           jnc 0x080544F9
+0000c491 08054491 8d b4 26 00 00 00 00            lea esi, [esi]
+0000c498 08054498 8b 07                           mov eax, [edi]
+0000c49a 0805449a 85 c0                           test eax, eax
+0000c49c 0805449c 74 19                           jz 0x080544B7
+0000c49e 0805449e 85 ff                           test edi, edi
+0000c4a0 080544a0 74 15                           jz 0x080544B7
+0000c4a2 080544a2 89 fb                           mov ebx, edi
+0000c4a4 080544a4 eb 04                           jmp 0x080544AA
+0000c4a6 080544a6 66 90                           nop 
+
+[info   ] disassembling acss result #9/13: 0x805a117 - 0x805a1ac
+[info   ] matched insn count: 16, matched byte count: 16
+[info   ] printing disassembly of result: 
+
+00012117 0805a117 90                              nop 
+00012118 0805a118 39 fe                           cmp esi, edi
+0001211a 0805a11a 75 d5                           jnz 0x0805A0F1
+0001211c 0805a11c 89 f9                           mov ecx, edi
+0001211e 0805a11e 89 c2                           mov edx, eax
+00012120 0805a120 2b 55 f4                        sub edx, [ebp-0xC]
+00012123 0805a123 1b 4d e4                        sbb ecx, [ebp-0x1C]
+00012126 0805a126 eb c9                           jmp 0x0805A0F1
+00012128 0805a128 39 f7                           cmp edi, esi
+0001212a 0805a12a 0f 82 10 ff ff ff               jc 0x0805A040
+00012130 0805a130 e9 17 ff ff ff                  jmp 0x0805A04C
+00012135 0805a135 90                              nop 
+00012136 0805a136 90                              nop 
+00012137 0805a137 90                              nop 
+00012138 0805a138 90                              nop 
+00012139 0805a139 90                              nop 
+0001213a 0805a13a 90                              nop 
+0001213b 0805a13b 90                              nop 
+0001213c 0805a13c 90                              nop 
+0001213d 0805a13d 90                              nop 
+0001213e 0805a13e 90                              nop 
+0001213f 0805a13f 90                              nop 
+00012140 0805a140 55                              push ebp
+00012141 0805a141 89 e5                           mov ebp, esp
+00012143 0805a143 57                              push edi
+00012144 0805a144 56                              push esi
+00012145 0805a145 53                              push ebx
+00012146 0805a146 e8 5a 00 00 00                  call 0x0805A1A5
+0001214b 0805a14b 81 c3 a9 5e 00 00               add ebx, 0x00005EA9
+00012151 0805a151 83 ec 1c                        sub esp, 0x1C
+00012154 0805a154 e8 57 f2 fe ff                  call _init
+00012159 0805a159 8d bb 04 ff ff ff               lea edi, [ebx-0xFC]
+0001215f 0805a15f 8d 83 04 ff ff ff               lea eax, [ebx-0xFC]
+00012165 0805a165 29 c7                           sub edi, eax
+00012167 0805a167 c1 ff 02                        sar edi, 0x02
+0001216a 0805a16a 85 ff                           test edi, edi
+0001216c 0805a16c 74 24                           jz 0x0805A192
+0001216e 0805a16e 31 f6                           xor esi, esi
+00012170 0805a170 8b 45 10                        mov eax, [ebp+0x10]
+00012173 0805a173 89 44 24 08                     mov [esp+0x8], eax
+00012177 0805a177 8b 45 0c                        mov eax, [ebp+0xC]
+0001217a 0805a17a 89 44 24 04                     mov [esp+0x4], eax
+0001217e 0805a17e 8b 45 08                        mov eax, [ebp+0x8]
+00012181 0805a181 89 04 24                        mov [esp], eax
+00012184 0805a184 ff 94 b3 04 ff ff ff            call [ebx+esi*4-0xFC]
+0001218b 0805a18b 83 c6 01                        add esi, 0x01
+0001218e 0805a18e 39 fe                           cmp esi, edi
+00012190 0805a190 72 de                           jc 0x0805A170
+00012192 0805a192 83 c4 1c                        add esp, 0x1C
+00012195 0805a195 5b                              pop ebx
+00012196 0805a196 5e                              pop esi
+00012197 0805a197 5f                              pop edi
+00012198 0805a198 5d                              pop ebp
+00012199 0805a199 c3                              ret 
+0001219a 0805a19a 8d b6 00 00 00 00               lea esi, [esi]
+000121a0 0805a1a0 55                              push ebp
+000121a1 0805a1a1 89 e5                           mov ebp, esp
+000121a3 0805a1a3 5d                              pop ebp
+000121a4 0805a1a4 c3                              ret 
+000121a5 0805a1a5 8b 1c 24                        mov ebx, [esp]
+000121a8 0805a1a8 c3                              ret 
+000121a9 0805a1a9 90                              nop 
+000121aa 0805a1aa 90                              nop 
+000121ab 0805a1ab 90                              nop 
+000121ac 0805a1ac 90                              nop 
+
+[info   ] disassembling acss result #10/13: 0x80533cb - 0x805342f
+[info   ] matched insn count: 19, matched byte count: 19
+[info   ] printing disassembly of result: 
+
+0000b3cb 080533cb 90                              nop 
+0000b3cc 080533cc 90                              nop 
+0000b3cd 080533cd 90                              nop 
+0000b3ce 080533ce 90                              nop 
+0000b3cf 080533cf 90                              nop 
+0000b3d0 080533d0 55                              push ebp
+0000b3d1 080533d1 89 e5                           mov ebp, esp
+0000b3d3 080533d3 8b 45 08                        mov eax, [ebp+0x8]
+0000b3d6 080533d6 53                              push ebx
+0000b3d7 080533d7 0f b6 10                        movzx edx, [eax]
+0000b3da 080533da 80 fa 2f                        cmp dl, 0x2F
+0000b3dd 080533dd 75 0c                           jnz 0x080533EB
+0000b3df 080533df 90                              nop 
+0000b3e0 080533e0 83 c0 01                        add eax, 0x01
+0000b3e3 080533e3 0f b6 10                        movzx edx, [eax]
+0000b3e6 080533e6 80 fa 2f                        cmp dl, 0x2F
+0000b3e9 080533e9 74 f5                           jz 0x080533E0
+0000b3eb 080533eb 84 d2                           test dl, dl
+0000b3ed 080533ed 74 2f                           jz 0x0805341E
+0000b3ef 080533ef 89 c1                           mov ecx, eax
+0000b3f1 080533f1 31 db                           xor ebx, ebx
+0000b3f3 080533f3 eb 15                           jmp 0x0805340A
+0000b3f5 080533f5 8d 76 00                        lea esi, [esi]
+0000b3f8 080533f8 84 db                           test bl, bl
+0000b3fa 080533fa 74 04                           jz 0x08053400
+0000b3fc 080533fc 89 c8                           mov eax, ecx
+0000b3fe 080533fe 31 db                           xor ebx, ebx
+0000b400 08053400 83 c1 01                        add ecx, 0x01
+0000b403 08053403 0f b6 11                        movzx edx, [ecx]
+0000b406 08053406 84 d2                           test dl, dl
+0000b408 08053408 74 14                           jz 0x0805341E
+0000b40a 0805340a 80 fa 2f                        cmp dl, 0x2F
+0000b40d 0805340d 75 e9                           jnz 0x080533F8
+0000b40f 0805340f 83 c1 01                        add ecx, 0x01
+0000b412 08053412 bb 01 00 00 00                  mov ebx, 0x00000001
+0000b417 08053417 0f b6 11                        movzx edx, [ecx]
+0000b41a 0805341a 84 d2                           test dl, dl
+0000b41c 0805341c 75 ec                           jnz 0x0805340A
+0000b41e 0805341e 5b                              pop ebx
+0000b41f 0805341f 5d                              pop ebp
+0000b420 08053420 c3                              ret 
+0000b421 08053421 eb 0d                           jmp 0x08053430
+0000b423 08053423 90                              nop 
+0000b424 08053424 90                              nop 
+0000b425 08053425 90                              nop 
+0000b426 08053426 90                              nop 
+0000b427 08053427 90                              nop 
+0000b428 08053428 90                              nop 
+0000b429 08053429 90                              nop 
+0000b42a 0805342a 90                              nop 
+0000b42b 0805342b 90                              nop 
+0000b42c 0805342c 90                              nop 
+0000b42d 0805342d 90                              nop 
+0000b42e 0805342e 90                              nop 
+0000b42f 0805342f 90                              nop 
+
+[info   ] disassembling acss result #11/13: 0x805df41 - 0x805dfd5
+[info   ] matched insn count: 28, matched byte count: 28
+[info   ] printing disassembly of result: 
+
+00015f41 0805df41 90                              nop 
+00015f42 0805df42 05 08 59 90 05                  add eax, 0x05905908
+00015f47 0805df47 08 4a 91                        or [edx-0x6F], cl
+00015f4a 0805df4a 05 08 59 90 05                  add eax, 0x05905908
+00015f4f 0805df4f 08 11                           or [ecx], dl
+00015f51 0805df51 91                              xchg eax, ecx
+00015f52 0805df52 05 08 59 90 05                  add eax, 0x05905908
+00015f57 0805df57 08 59 90                        or [ecx-0x70], bl
+00015f5a 0805df5a 05 08 59 90 05                  add eax, 0x05905908
+00015f5f 0805df5f 08 e1                           or cl, ah
+00015f61 0805df61 90                              nop 
+00015f62 0805df62 05 08 59 90 05                  add eax, 0x05905908
+00015f67 0805df67 08 a2 92 05 08 59               or [edx+0x59080592], ah
+00015f6d 0805df6d 90                              nop 
+00015f6e 0805df6e 05 08 59 90 05                  add eax, 0x05905908
+00015f73 0805df73 08 6c 92 05                     or [edx+edx*4+0x5], ch
+00015f77 0805df77 08 59 90                        or [ecx-0x70], bl
+00015f7a 0805df7a 05 08 59 90 05                  add eax, 0x05905908
+00015f7f 0805df7f 08 59 90                        or [ecx-0x70], bl
+00015f82 0805df82 05 08 34 92 05                  add eax, 0x05923408
+00015f87 0805df87 08 59 90                        or [ecx-0x70], bl
+00015f8a 0805df8a 05 08 59 90 05                  add eax, 0x05905908
+00015f8f 0805df8f 08 59 90                        or [ecx-0x70], bl
+00015f92 0805df92 05 08 59 90 05                  add eax, 0x05905908
+00015f97 0805df97 08 fc                           or ah, bh
+00015f99 0805df99 91                              xchg eax, ecx
+00015f9a 0805df9a 05 08 c4 91 05                  add eax, 0x0591C408
+00015f9f 0805df9f 08 59 90                        or [ecx-0x70], bl
+00015fa2 0805dfa2 05 08 59 90 05                  add eax, 0x05905908
+00015fa7 0805dfa7 08 59 90                        or [ecx-0x70], bl
+00015faa 0805dfaa 05 08 59 90 05                  add eax, 0x05905908
+00015faf 0805dfaf 08 59 90                        or [ecx-0x70], bl
+00015fb2 0805dfb2 05 08 59 90 05                  add eax, 0x05905908
+00015fb7 0805dfb7 08 59 90                        or [ecx-0x70], bl
+00015fba 0805dfba 05 08 ae 91 05                  add eax, 0x0591AE08
+00015fbf 0805dfbf 08 a7 91 05 08 59               or [edi+0x59080591], ah
+00015fc5 0805dfc5 90                              nop 
+00015fc6 0805dfc6 05 08 59 90 05                  add eax, 0x05905908
+00015fcb 0805dfcb 08 59 90                        or [ecx-0x70], bl
+00015fce 0805dfce 05 08 11 91 05                  add eax, 0x05911108
+00015fd3 0805dfd3 08 59 90                        or [ecx-0x70], bl

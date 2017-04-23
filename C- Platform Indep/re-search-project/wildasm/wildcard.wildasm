@@ -1,0 +1,6 @@
+// wildasm filter example
+
+	mov eax, *
+	* (5-15)
+	ret
+	

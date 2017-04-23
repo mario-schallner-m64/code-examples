@@ -1,0 +1,344 @@
+
+re|scan 0.1 >-------------------------------------------------------------------
+                                      reverse engineering binary file scanner  <
+^-------------------------------------------------------------------------------
+| logfile: 'nop_zones.log', Mi Dez 14 2011 22:11:22
+^------------------------------------------------------------------------------^
+[info   ] attemting to scan 1 files
+[info   ] scanning file #0: '..\run\ls'
+[info   ] successfully loaded file: '..\run\ls'
+[info   ] detected file type: elf32
+[info   ] elf32: starting to analyze
+[info   ] entry point at 0x8049a30
+[info   ] elf32: analysis finished
+[info   ] # of acss results: 29
+[info   ] acss disassemble:
+// filter example 3
+// nop zones
+
+8-200 x insn {
+    type == nop;
+};
+
+[info   ] disassembling acss result #1/29: 0x8054193 - 0x805419f
+[info   ] matched insn count: 13, matched byte count: 13
+[info   ] printing disassembly of result: 
+
+0000c193 08054193 90                              nop 
+0000c194 08054194 90                              nop 
+0000c195 08054195 90                              nop 
+0000c196 08054196 90                              nop 
+0000c197 08054197 90                              nop 
+0000c198 08054198 90                              nop 
+0000c199 08054199 90                              nop 
+0000c19a 0805419a 90                              nop 
+0000c19b 0805419b 90                              nop 
+0000c19c 0805419c 90                              nop 
+0000c19d 0805419d 90                              nop 
+0000c19e 0805419e 90                              nop 
+0000c19f 0805419f 90                              nop 
+
+[info   ] disassembling acss result #2/29: 0x8055c06 - 0x8055c0f
+[info   ] matched insn count: 10, matched byte count: 10
+[info   ] printing disassembly of result: 
+
+0000dc06 08055c06 90                              nop 
+0000dc07 08055c07 90                              nop 
+0000dc08 08055c08 90                              nop 
+0000dc09 08055c09 90                              nop 
+0000dc0a 08055c0a 90                              nop 
+0000dc0b 08055c0b 90                              nop 
+0000dc0c 08055c0c 90                              nop 
+0000dc0d 08055c0d 90                              nop 
+0000dc0e 08055c0e 90                              nop 
+0000dc0f 08055c0f 90                              nop 
+
+[info   ] disassembling acss result #3/29: 0x80526b2 - 0x80526bf
+[info   ] matched insn count: 14, matched byte count: 14
+[info   ] printing disassembly of result: 
+
+0000a6b2 080526b2 90                              nop 
+0000a6b3 080526b3 90                              nop 
+0000a6b4 080526b4 90                              nop 
+0000a6b5 080526b5 90                              nop 
+0000a6b6 080526b6 90                              nop 
+0000a6b7 080526b7 90                              nop 
+0000a6b8 080526b8 90                              nop 
+0000a6b9 080526b9 90                              nop 
+0000a6ba 080526ba 90                              nop 
+0000a6bb 080526bb 90                              nop 
+0000a6bc 080526bc 90                              nop 
+0000a6bd 080526bd 90                              nop 
+0000a6be 080526be 90                              nop 
+0000a6bf 080526bf 90                              nop 
+
+[info   ] disassembling acss result #4/29: 0x8053423 - 0x805342f
+[info   ] matched insn count: 13, matched byte count: 13
+[info   ] printing disassembly of result: 
+
+0000b423 08053423 90                              nop 
+0000b424 08053424 90                              nop 
+0000b425 08053425 90                              nop 
+0000b426 08053426 90                              nop 
+0000b427 08053427 90                              nop 
+0000b428 08053428 90                              nop 
+0000b429 08053429 90                              nop 
+0000b42a 0805342a 90                              nop 
+0000b42b 0805342b 90                              nop 
+0000b42c 0805342c 90                              nop 
+0000b42d 0805342d 90                              nop 
+0000b42e 0805342e 90                              nop 
+0000b42f 0805342f 90                              nop 
+
+[info   ] disassembling acss result #5/29: 0x8054273 - 0x805427f
+[info   ] matched insn count: 13, matched byte count: 13
+[info   ] printing disassembly of result: 
+
+0000c273 08054273 90                              nop 
+0000c274 08054274 90                              nop 
+0000c275 08054275 90                              nop 
+0000c276 08054276 90                              nop 
+0000c277 08054277 90                              nop 
+0000c278 08054278 90                              nop 
+0000c279 08054279 90                              nop 
+0000c27a 0805427a 90                              nop 
+0000c27b 0805427b 90                              nop 
+0000c27c 0805427c 90                              nop 
+0000c27d 0805427d 90                              nop 
+0000c27e 0805427e 90                              nop 
+0000c27f 0805427f 90                              nop 
+
+[info   ] disassembling acss result #6/29: 0x8053a16 - 0x8053a1f
+[info   ] matched insn count: 10, matched byte count: 10
+[info   ] printing disassembly of result: 
+
+0000ba16 08053a16 90                              nop 
+0000ba17 08053a17 90                              nop 
+0000ba18 08053a18 90                              nop 
+0000ba19 08053a19 90                              nop 
+0000ba1a 08053a1a 90                              nop 
+0000ba1b 08053a1b 90                              nop 
+0000ba1c 08053a1c 90                              nop 
+0000ba1d 08053a1d 90                              nop 
+0000ba1e 08053a1e 90                              nop 
+0000ba1f 08053a1f 90                              nop 
+
+[info   ] disassembling acss result #7/29: 0x8059344 - 0x805934f
+[info   ] matched insn count: 12, matched byte count: 12
+[info   ] printing disassembly of result: 
+
+00011344 08059344 90                              nop 
+00011345 08059345 90                              nop 
+00011346 08059346 90                              nop 
+00011347 08059347 90                              nop 
+00011348 08059348 90                              nop 
+00011349 08059349 90                              nop 
+0001134a 0805934a 90                              nop 
+0001134b 0805934b 90                              nop 
+0001134c 0805934c 90                              nop 
+0001134d 0805934d 90                              nop 
+0001134e 0805934e 90                              nop 
+0001134f 0805934f 90                              nop 
+
+[info   ] disassembling acss result #8/29: 0x8052956 - 0x805295f
+[info   ] matched insn count: 10, matched byte count: 10
+[info   ] printing disassembly of result: 
+
+0000a956 08052956 90                              nop 
+0000a957 08052957 90                              nop 
+0000a958 08052958 90                              nop 
+0000a959 08052959 90                              nop 
+0000a95a 0805295a 90                              nop 
+0000a95b 0805295b 90                              nop 
+0000a95c 0805295c 90                              nop 
+0000a95d 0805295d 90                              nop 
+0000a95e 0805295e 90                              nop 
+0000a95f 0805295f 90                              nop 
+
+[info   ] disassembling acss result #9/29: 0x8058c33 - 0x8058c3f
+[info   ] matched insn count: 13, matched byte count: 13
+[info   ] printing disassembly of result: 
+
+00010c33 08058c33 90                              nop 
+00010c34 08058c34 90                              nop 
+00010c35 08058c35 90                              nop 
+00010c36 08058c36 90                              nop 
+00010c37 08058c37 90                              nop 
+00010c38 08058c38 90                              nop 
+00010c39 08058c39 90                              nop 
+00010c3a 08058c3a 90                              nop 
+00010c3b 08058c3b 90                              nop 
+00010c3c 08058c3c 90                              nop 
+00010c3d 08058c3d 90                              nop 
+00010c3e 08058c3e 90                              nop 
+00010c3f 08058c3f 90                              nop 
+
+[info   ] disassembling acss result #10/29: 0x8051e37 - 0x8051e3f
+[info   ] matched insn count: 9, matched byte count: 9
+[info   ] printing disassembly of result: 
+
+00009e37 08051e37 90                              nop 
+00009e38 08051e38 90                              nop 
+00009e39 08051e39 90                              nop 
+00009e3a 08051e3a 90                              nop 
+00009e3b 08051e3b 90                              nop 
+00009e3c 08051e3c 90                              nop 
+00009e3d 08051e3d 90                              nop 
+00009e3e 08051e3e 90                              nop 
+00009e3f 08051e3f 90                              nop 
+
+[info   ] disassembling acss result #11/29: 0x8059b86 - 0x8059b8f
+[info   ] matched insn count: 10, matched byte count: 10
+[info   ] printing disassembly of result: 
+
+00011b86 08059b86 90                              nop 
+00011b87 08059b87 90                              nop 
+00011b88 08059b88 90                              nop 
+00011b89 08059b89 90                              nop 
+00011b8a 08059b8a 90                              nop 
+00011b8b 08059b8b 90                              nop 
+00011b8c 08059b8c 90                              nop 
+00011b8d 08059b8d 90                              nop 
+00011b8e 08059b8e 90                              nop 
+00011b8f 08059b8f 90                              nop 
+
+[info   ] disassembling acss result #12/29: 0x8055ed3 - 0x8055edf
+[info   ] matched insn count: 13, matched byte count: 13
+[info   ] printing disassembly of result: 
+
+0000ded3 08055ed3 90                              nop 
+0000ded4 08055ed4 90                              nop 
+0000ded5 08055ed5 90                              nop 
+0000ded6 08055ed6 90                              nop 
+0000ded7 08055ed7 90                              nop 
+0000ded8 08055ed8 90                              nop 
+0000ded9 08055ed9 90                              nop 
+0000deda 08055eda 90                              nop 
+0000dedb 08055edb 90                              nop 
+0000dedc 08055edc 90                              nop 
+0000dedd 08055edd 90                              nop 
+0000dede 08055ede 90                              nop 
+0000dedf 08055edf 90                              nop 
+
+[info   ] disassembling acss result #13/29: 0x8054463 - 0x805446f
+[info   ] matched insn count: 13, matched byte count: 13
+[info   ] printing disassembly of result: 
+
+0000c463 08054463 90                              nop 
+0000c464 08054464 90                              nop 
+0000c465 08054465 90                              nop 
+0000c466 08054466 90                              nop 
+0000c467 08054467 90                              nop 
+0000c468 08054468 90                              nop 
+0000c469 08054469 90                              nop 
+0000c46a 0805446a 90                              nop 
+0000c46b 0805446b 90                              nop 
+0000c46c 0805446c 90                              nop 
+0000c46d 0805446d 90                              nop 
+0000c46e 0805446e 90                              nop 
+0000c46f 0805446f 90                              nop 
+
+[info   ] disassembling acss result #14/29: 0x8053842 - 0x805384f
+[info   ] matched insn count: 14, matched byte count: 14
+[info   ] printing disassembly of result: 
+
+0000b842 08053842 90                              nop 
+0000b843 08053843 90                              nop 
+0000b844 08053844 90                              nop 
+0000b845 08053845 90                              nop 
+0000b846 08053846 90                              nop 
+0000b847 08053847 90                              nop 
+0000b848 08053848 90                              nop 
+0000b849 08053849 90                              nop 
+0000b84a 0805384a 90                              nop 
+0000b84b 0805384b 90                              nop 
+0000b84c 0805384c 90                              nop 
+0000b84d 0805384d 90                              nop 
+0000b84e 0805384e 90                              nop 
+0000b84f 0805384f 90                              nop 
+
+[info   ] disassembling acss result #15/29: 0x8058cf4 - 0x8058cff
+[info   ] matched insn count: 12, matched byte count: 12
+[info   ] printing disassembly of result: 
+
+00010cf4 08058cf4 90                              nop 
+00010cf5 08058cf5 90                              nop 
+00010cf6 08058cf6 90                              nop 
+00010cf7 08058cf7 90                              nop 
+00010cf8 08058cf8 90                              nop 
+00010cf9 08058cf9 90                              nop 
+00010cfa 08058cfa 90                              nop 
+00010cfb 08058cfb 90                              nop 
+00010cfc 08058cfc 90                              nop 
+00010cfd 08058cfd 90                              nop 
+00010cfe 08058cfe 90                              nop 
+00010cff 08058cff 90                              nop 
+
+[info   ] disassembling acss result #16/29: 0x8058e67 - 0x8058e6f
+[info   ] matched insn count: 9, matched byte count: 9
+[info   ] printing disassembly of result: 
+
+00010e67 08058e67 90                              nop 
+00010e68 08058e68 90                              nop 
+00010e69 08058e69 90                              nop 
+00010e6a 08058e6a 90                              nop 
+00010e6b 08058e6b 90                              nop 
+00010e6c 08058e6c 90                              nop 
+00010e6d 08058e6d 90                              nop 
+00010e6e 08058e6e 90                              nop 
+00010e6f 08058e6f 90                              nop 
+
+[info   ] disassembling acss result #17/29: 0x8059fe4 - 0x8059fef
+[info   ] matched insn count: 12, matched byte count: 12
+[info   ] printing disassembly of result: 
+
+00011fe4 08059fe4 90                              nop 
+00011fe5 08059fe5 90                              nop 
+00011fe6 08059fe6 90                              nop 
+00011fe7 08059fe7 90                              nop 
+00011fe8 08059fe8 90                              nop 
+00011fe9 08059fe9 90                              nop 
+00011fea 08059fea 90                              nop 
+00011feb 08059feb 90                              nop 
+00011fec 08059fec 90                              nop 
+00011fed 08059fed 90                              nop 
+00011fee 08059fee 90                              nop 
+00011fef 08059fef 90                              nop 
+
+[info   ] disassembling acss result #18/29: 0x804c5f3 - 0x804c5ff
+[info   ] matched insn count: 13, matched byte count: 13
+[info   ] printing disassembly of result: 
+
+000045f3 0804c5f3 90                              nop 
+000045f4 0804c5f4 90                              nop 
+000045f5 0804c5f5 90                              nop 
+000045f6 0804c5f6 90                              nop 
+000045f7 0804c5f7 90                              nop 
+000045f8 0804c5f8 90                              nop 
+000045f9 0804c5f9 90                              nop 
+000045fa 0804c5fa 90                              nop 
+000045fb 0804c5fb 90                              nop 
+000045fc 0804c5fc 90                              nop 
+000045fd 0804c5fd 90                              nop 
+000045fe 0804c5fe 90                              nop 
+000045ff 0804c5ff 90                              nop 
+
+[info   ] disassembling acss result #19/29: 0x804cf33 - 0x804cf3f
+[info   ] matched insn count: 13, matched byte count: 13
+[info   ] printing disassembly of result: 
+
+00004f33 0804cf33 90                              nop 
+00004f34 0804cf34 90                              nop 
+00004f35 0804cf35 90                              nop 
+00004f36 0804cf36 90                              nop 
+00004f37 0804cf37 90                              nop 
+00004f38 0804cf38 90                              nop 
+00004f39 0804cf39 90                              nop 
+00004f3a 0804cf3a 90                              nop 
+00004f3b 0804cf3b 90                              nop 
+00004f3c 0804cf3c 90                              nop 
+00004f3d 0804cf3d 90                              nop 
+00004f3e 0804cf3e 90                              nop 
+00004f3f 0804cf3f 90                              nop 
+
+[info   ]
