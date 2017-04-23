@@ -1,0 +1,560 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="<?php print $language->language; ?>" xml:lang="<?php print $language->language; ?>" dir="<?php print $language->dir; ?>">
+
+<head>
+  <title><?php print $head_title ?></title>
+  
+  <META name="keywords" content="<?php include "ms_addon/keywords"; ?>">
+  
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <?php /* Setting the default style sheet language for validation */  ?>
+  
+  <?php print $head ?>
+  <?php print $styles ?>
+  
+  <!--[if IE 6]>
+    <link rel="stylesheet" type="text/css" href="<?php print base_path(). path_to_theme(); ?>/iestyles/ie6.css" />
+<![endif]-->
+
+  <!--[if IE 7]>
+    <link rel="stylesheet" type="text/css" href="<?php print base_path(). path_to_theme(); ?>/iestyles/ie7.css" />
+<![endif]-->
+ 
+<?php 
+
+	$MY_PATH = isset($_GET['q']) ? $_GET['q'] : '';
+	$MY_PATH = drupal_get_normal_path($MY_PATH);
+	$GLOBALS['MY_PATH'] = $MY_PATH;
+	
+	if(($MY_PATH == "node/1") || ($MY_PATH == "node/52")) $MY_FRONT = true;
+	else $MY_FRONT = false;
+	$GLOBALS['MY_FRONT'] = $MY_FRONT;
+?>	   
+  
+  <?php print $scripts ?>
+  
+  <script type="text/javascript">
+  <!--
+  // 
+  var i = 0;
+  var keep='';
+  var inames = new Array(6);
+
+  inames[0] = "crs";
+  inames[1] = "nanovi";
+  inames[2] = "cardiocode";
+  inames[3] = "energeticum";
+  inames[4] = "atlashome";
+// inames[5] = "bilispect";
+  inames[5] = "auramed";
+  inames[6] = "bodyguard";
+
+  
+  function icon_link_hover_on(n, x)
+  {
+    var icon_name = "icon_" + n;
+    var id1_name  = n + "_text1";
+    var id2_name  = n + "_text2";
+
+	document.getElementById(icon_name).src 
+		= "ms_addon/icons/" + icon_name + "_hover.png";
+
+	document.getElementById(icon_name).style.background =  "url('ms_addon/images/icon_links_back_hover.png')"; 
+	document.getElementById(icon_name).style.borderColor = "#8f9193";
+  	document.getElementById(icon_name).style.borderBottom = "1px solid #696b6d";
+	document.getElementById(icon_name).style.borderRight = "1px solid #696b6d";
+
+		
+    if( (x==1) || (x==2)) {
+        document.getElementById(id1_name).style.background = "#5f6061";   
+        document.getElementById(id2_name).style.color = "#535455";  
+    }
+	if( (x==3) || (keep == n) ) {
+        document.getElementById(id1_name).style.color = "#ffffff"; 
+        document.getElementById(id1_name).style.background = "#5f6061";   
+		
+        document.getElementById(id2_name).style.color = "#393a3b"; 
+
+    }
+    <?php if ($MY_FRONT){ ?> 
+		if(x==2) { 
+			// document.getElementById("p_main_details_" + n).style.visibility = "visible";
+			fadeIn("p_main_details_" + n); 
+		}
+	<?php }  ?>      
+		
+    return true;
+  }
+  
+  function icon_link_hover_off(n, x)
+  {
+    if(n == keep) return;
+    var icon_name = "icon_" + n;
+    var id1_name  = n + "_text1";
+    var id2_name  = n + "_text2";
+
+	document.getElementById(icon_name).src 
+	/*	= "ms_addon/icons/" + icon_name + ".png"; */
+			= "ms_addon/icons/" + icon_name + "_hover.png";
+
+
+	document.getElementById(icon_name).style.background =  "url('ms_addon/images/icon_links_back.png')"; 
+	document.getElementById(icon_name).style.borderColor = "#525b64";
+	
+  	
+    if( (x==1) || (x==2)) {
+        document.getElementById(id1_name).style.color = "#ffffff"; 
+        document.getElementById(id2_name).style.color = "#828486"; 
+        document.getElementById(id1_name).style.background = "";          
+    }
+    <?php if ($MY_FRONT){ ?>
+		if(x==2) {
+		// document.getElementById("p_main_details_" + n).style.visibility = "hidden";
+			fadeOut("p_main_details_" + n);   
+		}
+	
+	<?php }  ?> 
+
+    return true;
+  }
+  
+  
+
+  /* m.fader */
+  
+	var fading_speed = 3;
+  
+  	var fading_in = new Object();
+	var fading_out = new Object();
+	
+	fading_in.eID = 0;
+	fading_in.running = 0;
+	
+	fading_out.eID = 0;
+	fading_out.running = 0;
+	
+	function init_fading()
+	{
+		for(i=0; i<inames.length; i++) {
+			hide_me("p_main_details_" + inames[i]);
+			getElm("p_main_details_" + inames[i]).style.visibility='visible';
+		}
+	}
+  
+    function setOpacity(eID, opacityLevel) 
+	{
+		if((eID != fading_in.eID) && (eID != fading_out.eID)) return;
+        var eStyle = document.getElementById(eID).style;
+        eStyle.opacity = opacityLevel / 100;
+        eStyle.filter = 'alpha(opacity='+opacityLevel+')';
+    }
+
+	function getElm(eID) 
+	{
+        return document.getElementById(eID);
+    }
+    function show_me(eID) 
+	{
+        getElm(eID).style.visibility='visible';
+    }
+    function hide_me(eID) 
+	{
+        // getElm(eID).style.visibility='hidden';
+        getElm(eID).style.opacity = 0;
+        getElm(eID).style.filter = 'alpha(opacity='+0+')';		
+    }
+	
+	function fade_in_finished()
+	{
+		fading_in.running = 0;
+		fading_in.eID = 0;
+	}
+	
+	function fade_out_finished()
+	{
+		fading_out.running = 0;
+		fading_out.eID = 0;
+		hide_me(fading_out.eID);
+	}
+	
+	
+    function fadeIn(eID) {
+        // setOpacity(eID, 0); 
+		
+		if(fading_in.running && (fading_in.eID == eID)) return;
+		
+		if(fading_in.running) {
+			hide_me(fading_in.eID);
+			fading_in.running = 0;
+			fading_in.eID = 0;
+		}
+		
+		if(fading_out.running && fading_out.eID == eID) {
+			fade_out_finished();
+		}
+		
+		fading_in.eID = eID;
+		fading_in.running = 1;
+
+		// show_me(eID); 
+		var timer = 0;
+        for (var i=1; i<=25; i++) {
+         setTimeout("setOpacity('"+eID+"',"+i*4+")", timer * fading_speed);
+         timer++;
+        }
+		setTimeout("fade_in_finished()", timer * fading_speed);		
+    }
+    
+	function fadeOut(eID) {
+		
+		if(fading_out.running && (fading_out.eID == eID)) return;
+		
+		if(fading_out.running) {
+			hide_me(fading_out.eID);
+			fading_out.running = 0;
+			fading_out.eID = 0;
+		}
+		
+		if(fading_in.running && fading_in.eID == eID) return;
+		
+		fading_out.eID = eID;
+		fading_out.running = 1;
+
+        var timer = 0;
+        for (var i=25; i>=1; i--) {
+         setTimeout("setOpacity('"+eID+"',"+i*4+")", timer * fading_speed);
+         timer++;
+        }
+		setTimeout("fade_out_finished()", timer * fading_speed);		
+	}
+	
+
+  -->
+  </script>  
+  
+</head>
+ 
+
+<body onload="init_fading();" >
+
+<div id="page">
+ 
+ <div id="header">
+  
+  <?php
+  
+	   $lang_prefix = "";
+	   print '<div id="plinks_mario">';
+	   if($GLOBALS['language']->language == "de") {
+			$logo_translated = "ms_addon/images/logo_new_11.png";
+			print '';
+			print '<a href="?q=en/welcome" >English<img src="ms_addon/images/flag_uk.png" style="position: relative; top: 2px;left: 5px;"/></a>';
+			$lang_prefix = "de";
+	   } else {
+			$logo_translated = "ms_addon/images/logo_new_11_en.png";
+			print '<a href="?q=de/welcome" >Deutsch<img src="ms_addon/images/flag_de.png" style="position: relative; top: 2px;left: 5px;"/></a>';
+			$lang_prefix = "en";
+	   }
+	   global $user;
+	   if($user && ($user->uid)) {
+			print '<a style="margin-left: 10px;" href="?q=' . $lang_prefix . '/user" >Log Out<img src="ms_addon/icons/login.png" style="position: relative; top: 2px;left: 5px;  margin-left: 3px;"/></a> ';
+	   } else {
+			print '<a style="margin-left: 10px;" href="?q=' . $lang_prefix . '/user" >Login<img src="ms_addon/icons/login.png" style="position: relative; top: 2px;left: 5px;  margin-left: 3px;"/></a> ';	   
+	   }
+	   print '</div>';
+	   ?>
+	   
+	   <img src="<? print $logo_translated; ?>" style="opacity: 1;" />
+	   
+  </div>
+  
+<div id="megabreak"> </div>   
+<div id="utilities">
+
+<div id="navi_text" style="visibility: visible;">
+<?php if($lang_prefix == "de") { 
+  include 'ms_addon/start/rotate_minitexts_de.php';
+} else { 
+  include 'ms_addon/start/rotate_minitexts_en.php';  
+} 
+?>
+</div>
+
+
+  <?php print $search_box ?>
+  
+  <?php if (isset($primary_links)) : ?>
+  <?php print '<div id="plinks">'; ?>
+     
+             <?php
+		
+		if(theme_get_setting('menutype')== '0'){ 
+		 
+			print theme('links', $primary_links, array('class' => 'links primary-links'));	
+		}
+	
+	   else {
+	    
+			print phptemplate_get_primary_links();
+		}
+	   
+	   ?>
+	   
+               <?php print '</div>'; ?>
+        <?php endif; ?>
+		
+              
+		
+		<div id="icon_links">		
+			
+		<?php if($lang_prefix == "de") { ?> 
+		<a 	href="?q=bodyguard" title="BODYGUARD - ... schenk dir ein Juhuu!"
+        <?php } else { ?>
+        <a 	href="?q=en/bodyguard"  title="BODYGUARD - feel a Yeah!"
+        <?php } ?>
+			>	
+		<img id="icon_bodyguard" src="ms_addon/icons/icon_bodyguard_hover.png" onMouseOver="return icon_link_hover_on('bodyguard', 2);"
+			onMouseOut="return icon_link_hover_off('bodyguard', 2);"/></a>	
+		
+		
+		<?php if($lang_prefix == "de") { ?> 
+		<a 	href="?q=crs" title="MeviTec - CRS&reg; - Analysesystem"
+        <?php } else { ?>
+        <a 	href="?q=en/crs"  title="MeviTec - CRS&reg; - Analysis-System"
+        <?php } ?>
+			>	
+		<img id="icon_crs" src="ms_addon/icons/icon_crs_hover.png" onMouseOver="return icon_link_hover_on('crs', 2);"
+			onMouseOut="return icon_link_hover_off('crs', 2);"/></a>		
+		
+				
+		<?php if($lang_prefix == "de") { ?> 
+		<a 	href="?q=cardiocode" title="CARDIOCODE - die Innovation in der Kardiologie"
+        <?php } else { ?>
+        <a 	href="?q=en/cardiocode" title="CARDIOCODE - the innovation in Cardiology"
+        <?php } ?>
+			>
+		<img id="icon_cardiocode" src="ms_addon/icons/icon_cardiocode_hover.png" onMouseOver="return icon_link_hover_on('cardiocode', 2);"
+			onMouseOut="return icon_link_hover_off('cardiocode', 2);"/></a>
+		
+				
+		<?php if($lang_prefix == "de") { ?> 
+		<a 	href="?q=nanovi" title="Eng3 - NanoVi&trade; - verbessert die Zellreparatur, erh&ouml;ht den oxidativen Schutz"
+        <?php } else { ?>
+        <a 	href="?q=en/nanovi" title="Eng3 - NanoVi&trade; - increases the cell repair mechanism, increases oxidative protection"
+        <?php } ?>
+			>
+		<img id="icon_nanovi" src="ms_addon/icons/icon_nanovi_hover.png" onMouseOver="return icon_link_hover_on('nanovi', 2);"
+			onMouseOut="return icon_link_hover_off('nanovi', 2);"/></a>
+
+		
+		<?php if($lang_prefix == "de") { ?> 
+		<a 	href="?q=biopulsar" title="Auramed - Biopulsar-Reflexograph&reg; - Biodynamsiches Elektro-Chirogramm"
+        <?php } else { ?>
+        <a 	href="?q=en/biopulsar" title="Auramed - Biopulsar-Reflexograph&reg; - biodynamic electronic chirogram"
+        <?php } ?>
+			>
+		<img id="icon_auramed" src="ms_addon/icons/icon_auramed_hover.png"
+            onMouseOver="return icon_link_hover_on('auramed', 2);"
+			onMouseOut="return icon_link_hover_off('auramed', 2);" /></a>
+
+        <?php if($lang_prefix == "de") { ?> 
+		<a 	href="?q=energeticum" title="ENERGETICUM&reg; - Vital- und Mikron&auml;hrstoffe - erh&auml;ltlich im Online-Shop!"
+        <?php } else { ?>
+        <a 	href="?q=en/energeticum" title="ENERGETICUM&reg; - Micronutrients - available in our online-shop!"
+        <?php } ?>
+			>
+		<img id="icon_energeticum" src="ms_addon/icons/icon_energeticum_hover.png" onMouseOver="return icon_link_hover_on('energeticum', 2);"
+			onMouseOut="return icon_link_hover_off('energeticum', 2);"/></a>
+		
+
+		<?php if($lang_prefix == "de") { ?> 
+		<a 	href="?q=atlashometest" title="AtlasHome&reg;Test - Harnstreifentests - erh&auml;ltlich im Online-Shop!"
+        <?php } else { ?>
+        <a 	href="?q=en/atlashometest" title="AtlasHome&reg;Test - Urine Tests - available in our online-shop!"
+        <?php } ?>
+			>
+		<img id="icon_atlashome" src="ms_addon/icons/icon_atlashome_hover.png" onMouseOver="return icon_link_hover_on('atlashome', 2);"
+			onMouseOut="return icon_link_hover_off('atlashome', 2);"/></a>
+        
+        
+        <img src="ms_addon/icons/cart-full-soft.png" style="position: absolute; right: 36px; top: 42px;" />
+        <img src="ms_addon/icons/cart-full-soft.png" style="position: absolute; right: 161px; top: 42px;" />
+	
+       
+       
+<?php if($lang_prefix == "de") { ?>        
+		<div id="bodyguard_text1" style="visibility: visible; position: absolute;  right: 521px; ">BODYGUARD</div>
+        <div id="bodyguard_text2" style="visibility: visible; position: absolute;  right: 535px;">MeviTec</div>
+		
+		<div id="crs_text1" style="visibility: visible; position: absolute;  right: 445px; ">CRS&reg;</div>
+        <div id="crs_text2" style="visibility: visible; position: absolute;  right: 440px;">MeviTec</div>
+        
+        <div id="cardiocode_text1" style="visibility: visible; position: absolute;  right: 350px;">CARDIOCODE</div>
+        <div id="cardiocode_text2" style="visibility: visible; position: absolute;  right: 349px;">CARDIOCODE</div>
+
+
+		<div id="nanovi_text1" style="visibility: visible; position: absolute;  right: 290px;">NanoVi&trade;</div>
+        <div id="nanovi_text2" style="visibility: visible; position: absolute;  right: 302px;">Eng3</div>
+
+		<div id="auramed_text1" style="visibility: visible; position: absolute;  right: 198px;">Biopulsar&reg;</div>
+        <div id="auramed_text2" style="visibility: visible; position: absolute;  right: 210px;">Auramed</div>
+		
+		
+
+        <div id="energeticum_text1" style="visibility: visible; position: absolute;  right: 100px;">Mikron&auml;hrstoffe</div>
+        <div id="energeticum_text2" style="visibility: visible; position: absolute;  right: 90px;">ENERGETICUM&reg;</div>        
+
+        <div id="atlashome_text1" style="visibility: visible; position: absolute;  right: 0px;">Harnstreifentests</div>
+        <div id="atlashome_text2" style="visibility: visible; position: absolute;  right: 0px;">AtlasHome&reg;Test</div>   
+<?php } else {  ?>
+		<div id="bodyguard_text1" style="visibility: visible; position: absolute;  right: 521px; ">BODYGUARD</div>
+        <div id="bodyguard_text2" style="visibility: visible; position: absolute;  right: 535px;">MeviTec</div>
+		
+		<div id="crs_text1" style="visibility: visible; position: absolute;  right: 445px; ">CRS&reg;</div>
+        <div id="crs_text2" style="visibility: visible; position: absolute;  right: 440px;">MeviTec</div>
+        
+        <div id="cardiocode_text1" style="visibility: visible; position: absolute;  right: 350px;">CARDIOCODE</div>
+        <div id="cardiocode_text2" style="visibility: visible; position: absolute;  right: 349px;">CARDIOCODE</div>
+
+
+		<div id="nanovi_text1" style="visibility: visible; position: absolute;  right: 290px;">NanoVi&trade;</div>
+        <div id="nanovi_text2" style="visibility: visible; position: absolute;  right: 302px;">Eng3</div>
+
+
+        <div id="auramed_text1" style="visibility: visible; position: absolute;  right: 198px;">Biopulsar&reg;</div>
+        <div id="auramed_text2" style="visibility: visible; position: absolute;  right: 210px;">Auramed</div>
+		
+		
+
+        <div id="energeticum_text1" style="visibility: visible; position: absolute;  right: 75px;">Micro Nutrients</div>
+        <div id="energeticum_text2" style="visibility: visible; position: absolute;  right: 90px;">ENERGETICUM&reg;</div>        
+
+        <div id="atlashome_text1" style="visibility: visible; position: absolute;  right: 0px;">Urine Tests</div>
+        <div id="atlashome_text2" style="visibility: visible; position: absolute;  right: 0px;">AtlasHome&reg;Test</div>   
+<?php } ?> 		
+
+  
+        
+		</div>
+        
+        
+       
+
+    
+</div>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  <div id="megabreak2"> </div>   
+  
+  
+         <?php if (($secondary_links)) : ?>
+      <?php print '<div id="submenu">' ?>
+          <?php print theme('links', $secondary_links, array('class' => 'links secondary-links')) ?>
+          <?php print '</div><div class="stopfloat"></div>' ?>
+        <?php endif; ?>
+
+   
+
+  <div class="wrapper"><!--wrapper:defines whole content margins-->
+  
+          	<!-- left -->
+        <?php if ($left) { ?>
+          <div class="lsidebar">
+
+          
+            <?php print $left ?>
+            
+          </div><!-- end left -->
+        <?php } ?>
+
+  
+  
+  <div id="primary" class=<?php print '"'.marinelli_width( $left, $right).'">' ?>
+  
+               <div class="singlepage">
+	  <?php /* print $breadcrumb; */ ?> 
+	  
+   <?php if ($mission): print '<div id="sitemission"><p>'. $mission .'</p></div>'; endif; ?>
+         
+		 <?php 
+		 if ($title): 
+		 
+		 if ($MY_FRONT){/* if we are on the front page use <h2> for title */
+		 
+		 print '<h1'. ($tabs ? ' class="with-tabs"' : '') .'>' . $title  . '</h1>'; 
+		 
+		 }
+		else {print '<h1'. ($tabs ? ' class="with-tabs"' : '') .'>'. $title .'</h1>';  /* otherwise use <h1> for node title */
+		 }
+		 
+		 endif; ?>
+		 
+          <?php if ($tabs): print '<div class="tabs">'.$tabs.'</div>'; endif; ?>
+        <?php if ($help) { ?><div class="help"><?php print $help ?></div><?php } ?>
+          <?php if ($messages) { ?><div class="messages"><?php print $messages ?></div><?php } ?>
+<div class="drdot">
+<hr />
+</div>
+         
+          
+ <?php print $content ?>
+ 
+ 
+ <?
+ 
+	include "ms_addon/start/main_details.php";
+ 
+ ?>
+ 
+ 
+      </div>
+    </div>
+
+   
+   
+   	<!-- right -->
+        <?php if ($right) { ?>
+          <div class="rsidebar">
+ 
+            <?php print $right ?>
+         
+          </div><!-- end right -->
+        <?php } ?>
+
+
+
+ <div class="clear"></div>
+
+  </div>
+<div id="myfooter">
+
+
+ <a href="http://www.muellerwien.at" class="myfooter" style="float: left;">
+Copyright 2010-2013 &copy;M&uuml;ller Medizinische Labormesstechnik Ges.m.b.H.</a>
+
+
+<a href="mailto:firma@muellerwien.at" class="myfooter" style="font-size: 1.0em; position: relative; left: -80px;">
+<img id="mail" src="images/m_mail1.png" />
+firma@muellerwien.at </a>
+
+<a href="?q=<?php if($GLOBALS['language']->language == "en") { print "en/"; } ?>impressum" class="myfooter" style="float:right;">Impressum</a>
+
+</div>
+</div>
+<!-- Close Page -->
+<!--
+<div id="footer">
+<?php print $footer ?>
+<?php print $footer_message ?>
+</div> -->
+
+<?php print $closure ?>
+</body>
+</html>

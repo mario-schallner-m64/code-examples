@@ -1,0 +1,951 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>rv_mainwin</class>
+ <widget class="QMainWindow" name="rv_mainwin">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1000</width>
+    <height>800</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>re|view</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="resources/resources.qrc">
+    <normaloff>:/logos/rs_general_logo_big.png</normaloff>:/logos/rs_general_logo_big.png</iconset>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QTabWidget" name="tabWidget_main">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="tabPosition">
+       <enum>QTabWidget::North</enum>
+      </property>
+      <property name="currentIndex">
+       <number>3</number>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>22</width>
+        <height>16</height>
+       </size>
+      </property>
+      <property name="tabsClosable">
+       <bool>true</bool>
+      </property>
+      <property name="movable">
+       <bool>true</bool>
+      </property>
+      <widget class="QWidget" name="tab_overview">
+       <attribute name="icon">
+        <iconset resource="resources/resources.qrc">
+         <normaloff>:/logos/rs_general_logo_big.png</normaloff>:/logos/rs_general_logo_big.png</iconset>
+       </attribute>
+       <attribute name="title">
+        <string>Overview</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_3">
+        <item>
+         <widget class="QTextEdit" name="textEdit_startup">
+          <property name="frameShape">
+           <enum>QFrame::NoFrame</enum>
+          </property>
+          <property name="undoRedoEnabled">
+           <bool>false</bool>
+          </property>
+          <property name="readOnly">
+           <bool>true</bool>
+          </property>
+          <property name="html">
+           <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p align=&quot;center&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8pt;&quot;&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8pt;&quot;&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8pt;&quot;&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8pt;&quot;&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8pt;&quot;&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8pt;&quot;&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;img src=&quot;:/logos/re_view_big_nofooter.png&quot; /&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8pt;&quot;&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;img src=&quot;:/pixx/hxdmp.png&quot; /&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8pt;&quot;&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8pt; color:#363641;&quot;&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8pt; color:#363641;&quot;&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt; font-weight:600; color:#363641;&quot;&gt;Part of the re|search project&lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt; font-weight:600; color:#363641;&quot;&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8pt; color:#494958;&quot;&gt;Written in 2013 by Mario A. Schallner&lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8pt; color:#494958;&quot;&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8pt; color:#363641;&quot;&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8pt; color:#363641;&quot;&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt; font-weight:600; color:#363641;&quot;&gt;open source, platform independent, free&lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt; font-weight:600; color:#363641;&quot;&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8pt; color:#363641;&quot;&gt;have a lot of fun ...&lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8pt; color:#363641;&quot;&gt;&lt;/p&gt;
+&lt;p align=&quot;right&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8pt; color:#363641;&quot;&gt;http://www.re-search.com/re-view&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QScrollArea" name="scrollArea_overview">
+          <property name="verticalScrollBarPolicy">
+           <enum>Qt::ScrollBarAsNeeded</enum>
+          </property>
+          <property name="horizontalScrollBarPolicy">
+           <enum>Qt::ScrollBarAsNeeded</enum>
+          </property>
+          <property name="widgetResizable">
+           <bool>true</bool>
+          </property>
+          <widget class="QWidget" name="scrollAreaWidgetContents">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>0</y>
+             <width>98</width>
+             <height>28</height>
+            </rect>
+           </property>
+          </widget>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tab_acss">
+       <attribute name="icon">
+        <iconset resource="resources/resources.qrc">
+         <normaloff>:/icons/acss_1_small.png</normaloff>:/icons/acss_1_small.png</iconset>
+       </attribute>
+       <attribute name="title">
+        <string>ACSS</string>
+       </attribute>
+      </widget>
+      <widget class="QWidget" name="tab_wildasm">
+       <attribute name="icon">
+        <iconset resource="resources/resources.qrc">
+         <normaloff>:/icons/wildasm2.png</normaloff>:/icons/wildasm2.png</iconset>
+       </attribute>
+       <attribute name="title">
+        <string>WildASM</string>
+       </attribute>
+      </widget>
+      <widget class="QWidget" name="tab_rescript">
+       <attribute name="icon">
+        <iconset resource="resources/resources.qrc">
+         <normaloff>:/icons/x-sys_action.png</normaloff>:/icons/x-sys_action.png</iconset>
+       </attribute>
+       <attribute name="title">
+        <string>RE|Script</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_5"/>
+      </widget>
+      <widget class="QWidget" name="tab_notes">
+       <attribute name="icon">
+        <iconset resource="resources/resources.qrc">
+         <normaloff>:/icons/notes_4.png</normaloff>:/icons/notes_4.png</iconset>
+       </attribute>
+       <attribute name="title">
+        <string>Notes</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_4">
+        <item>
+         <widget class="QTextEdit" name="textEdit">
+          <property name="html">
+           <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt;Your notes here ...&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tab_log">
+       <attribute name="icon">
+        <iconset resource="resources/resources.qrc">
+         <normaloff>:/icons/notes_2.png</normaloff>:/icons/notes_2.png</iconset>
+       </attribute>
+       <attribute name="title">
+        <string>Log</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_2">
+        <item>
+         <widget class="QTextEdit" name="textEdit_log">
+          <property name="font">
+           <font>
+            <family>Consolas</family>
+           </font>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1000</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="actionOpen_Binary"/>
+    <addaction name="actionWrite_Binary"/>
+    <addaction name="actionSave_Binary_as"/>
+    <addaction name="separator"/>
+    <addaction name="actionOpen_Workspace"/>
+    <addaction name="actionSave_Workspace"/>
+    <addaction name="actionSave_Workspace_as"/>
+    <addaction name="actionClose_Workspace"/>
+    <addaction name="separator"/>
+    <addaction name="actionExit"/>
+   </widget>
+   <widget class="QMenu" name="menuDisplay">
+    <property name="title">
+     <string>View</string>
+    </property>
+    <addaction name="actionNew_Hexview"/>
+    <addaction name="actionNew_Hexview_Window"/>
+    <addaction name="separator"/>
+    <addaction name="actionNew_Disassembly"/>
+    <addaction name="actionNew_Disassembly_Window"/>
+    <addaction name="separator"/>
+    <addaction name="actionImports"/>
+    <addaction name="actionExports"/>
+    <addaction name="actionSymbols"/>
+    <addaction name="separator"/>
+    <addaction name="actionASCIIZ_Strings"/>
+    <addaction name="actionUNICODE_Strings"/>
+    <addaction name="separator"/>
+    <addaction name="actionBookmarks"/>
+    <addaction name="actionComments"/>
+    <addaction name="actionNames"/>
+    <addaction name="separator"/>
+    <addaction name="actionOverview"/>
+    <addaction name="actionNotes"/>
+    <addaction name="actionLog"/>
+    <addaction name="separator"/>
+    <addaction name="actionShow_Fullscreen"/>
+   </widget>
+   <widget class="QMenu" name="menuGoto">
+    <property name="title">
+     <string>Goto</string>
+    </property>
+    <addaction name="actionVa"/>
+    <addaction name="actionFileOffset"/>
+    <addaction name="actionSegment_offset"/>
+   </widget>
+   <widget class="QMenu" name="menuSearch">
+    <property name="title">
+     <string>Analyze</string>
+    </property>
+    <addaction name="separator"/>
+    <addaction name="actionACSS"/>
+    <addaction name="actionWILDASM"/>
+    <addaction name="separator"/>
+    <addaction name="actionCrypto_Scan"/>
+   </widget>
+   <widget class="QMenu" name="menuHelp">
+    <property name="title">
+     <string>Help</string>
+    </property>
+    <addaction name="actionRE_View_Help"/>
+    <addaction name="separator"/>
+    <addaction name="actionAbout_re_view"/>
+   </widget>
+   <widget class="QMenu" name="menuRE_Script">
+    <property name="title">
+     <string>re|script</string>
+    </property>
+    <addaction name="actionEditor"/>
+    <addaction name="separator"/>
+    <addaction name="actionRun_Script"/>
+   </widget>
+   <widget class="QMenu" name="menuDisassemble">
+    <property name="title">
+     <string>Disassemble</string>
+    </property>
+    <addaction name="actionFull_Analysis"/>
+   </widget>
+   <widget class="QMenu" name="menuPlugins">
+    <property name="title">
+     <string>Plugins</string>
+    </property>
+    <addaction name="actionManage_plugins"/>
+   </widget>
+   <widget class="QMenu" name="menuConfiguration">
+    <property name="title">
+     <string>Configuration</string>
+    </property>
+    <addaction name="actionRe_view_Config"/>
+   </widget>
+   <widget class="QMenu" name="menuEdit">
+    <property name="title">
+     <string>Edit</string>
+    </property>
+    <addaction name="actionUndo"/>
+    <addaction name="actionRedo"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuEdit"/>
+   <addaction name="menuDisplay"/>
+   <addaction name="menuGoto"/>
+   <addaction name="menuDisassemble"/>
+   <addaction name="menuSearch"/>
+   <addaction name="menuRE_Script"/>
+   <addaction name="menuPlugins"/>
+   <addaction name="menuConfiguration"/>
+   <addaction name="menuHelp"/>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionOpen_Binary"/>
+   <addaction name="separator"/>
+   <addaction name="actionNew_Disassembly"/>
+   <addaction name="actionNew_Hexview"/>
+   <addaction name="separator"/>
+   <addaction name="actionOverview"/>
+   <addaction name="actionACSS"/>
+   <addaction name="actionWILDASM"/>
+   <addaction name="actionEditor"/>
+   <addaction name="actionManage_plugins"/>
+   <addaction name="separator"/>
+   <addaction name="actionImports"/>
+   <addaction name="actionTags"/>
+   <addaction name="separator"/>
+   <addaction name="actionNotes"/>
+   <addaction name="actionLog"/>
+   <addaction name="separator"/>
+   <addaction name="actionShow_Fullscreen"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <widget class="QDockWidget" name="dockWidget_symbolic">
+   <property name="windowTitle">
+    <string>Symbolic Information</string>
+   </property>
+   <attribute name="dockWidgetArea">
+    <number>2</number>
+   </attribute>
+   <widget class="QWidget" name="dockWidgetContents_2">
+    <property name="baseSize">
+     <size>
+      <width>200</width>
+      <height>0</height>
+     </size>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout_6">
+     <property name="leftMargin">
+      <number>0</number>
+     </property>
+     <property name="topMargin">
+      <number>0</number>
+     </property>
+     <property name="rightMargin">
+      <number>0</number>
+     </property>
+     <item>
+      <widget class="QTabWidget" name="tabWidget_symbolic">
+       <property name="baseSize">
+        <size>
+         <width>200</width>
+         <height>0</height>
+        </size>
+       </property>
+       <property name="tabPosition">
+        <enum>QTabWidget::South</enum>
+       </property>
+       <property name="currentIndex">
+        <number>3</number>
+       </property>
+       <property name="documentMode">
+        <bool>false</bool>
+       </property>
+       <widget class="QWidget" name="tab_imports">
+        <attribute name="icon">
+         <iconset resource="resources/resources.qrc">
+          <normaloff>:/icons/import_small.png</normaloff>:/icons/import_small.png</iconset>
+        </attribute>
+        <attribute name="title">
+         <string/>
+        </attribute>
+        <attribute name="toolTip">
+         <string>Imports</string>
+        </attribute>
+        <layout class="QVBoxLayout" name="verticalLayout_7">
+         <property name="margin">
+          <number>0</number>
+         </property>
+         <item>
+          <widget class="QTableWidget" name="tableWidget_imports">
+           <property name="frameShape">
+            <enum>QFrame::NoFrame</enum>
+           </property>
+           <property name="editTriggers">
+            <set>QAbstractItemView::NoEditTriggers</set>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout">
+           <item>
+            <widget class="QPushButton" name="pushButton_find_import">
+             <property name="text">
+              <string/>
+             </property>
+             <property name="icon">
+              <iconset resource="resources/resources.qrc">
+               <normaloff>:/icons/find.png</normaloff>:/icons/find.png</iconset>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLineEdit" name="lineEdit_find_import"/>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="tab_symbols">
+        <attribute name="icon">
+         <iconset resource="resources/resources.qrc">
+          <normaloff>:/icons/symbol_small.png</normaloff>:/icons/symbol_small.png</iconset>
+        </attribute>
+        <attribute name="title">
+         <string/>
+        </attribute>
+        <attribute name="toolTip">
+         <string>Symbols</string>
+        </attribute>
+        <layout class="QVBoxLayout" name="verticalLayout_8">
+         <property name="margin">
+          <number>0</number>
+         </property>
+         <item>
+          <widget class="QTableWidget" name="tableWidget_symbols">
+           <property name="frameShape">
+            <enum>QFrame::NoFrame</enum>
+           </property>
+           <property name="editTriggers">
+            <set>QAbstractItemView::NoEditTriggers</set>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_2">
+           <item>
+            <widget class="QPushButton" name="pushButton_find_symbol">
+             <property name="text">
+              <string/>
+             </property>
+             <property name="icon">
+              <iconset resource="resources/resources.qrc">
+               <normaloff>:/icons/find.png</normaloff>:/icons/find.png</iconset>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLineEdit" name="lineEdit_find_symbol"/>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="tab_functions">
+        <attribute name="icon">
+         <iconset resource="resources/resources.qrc">
+          <normaloff>:/icons/function_small.png</normaloff>:/icons/function_small.png</iconset>
+        </attribute>
+        <attribute name="title">
+         <string/>
+        </attribute>
+        <attribute name="toolTip">
+         <string>Functions</string>
+        </attribute>
+        <layout class="QVBoxLayout" name="verticalLayout_9">
+         <property name="margin">
+          <number>0</number>
+         </property>
+         <item>
+          <widget class="QTableWidget" name="tableWidget_functions">
+           <property name="frameShape">
+            <enum>QFrame::NoFrame</enum>
+           </property>
+           <property name="editTriggers">
+            <set>QAbstractItemView::NoEditTriggers</set>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_3">
+           <item>
+            <widget class="QPushButton" name="pushButton_find_function">
+             <property name="text">
+              <string/>
+             </property>
+             <property name="icon">
+              <iconset resource="resources/resources.qrc">
+               <normaloff>:/icons/find.png</normaloff>:/icons/find.png</iconset>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLineEdit" name="lineEdit_find_function"/>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="tab_ascii_strings">
+        <attribute name="icon">
+         <iconset resource="resources/resources.qrc">
+          <normaloff>:/icons/strings_small.png</normaloff>:/icons/strings_small.png</iconset>
+        </attribute>
+        <attribute name="title">
+         <string/>
+        </attribute>
+        <attribute name="toolTip">
+         <string>Ascii Strings</string>
+        </attribute>
+        <layout class="QVBoxLayout" name="verticalLayout_10">
+         <property name="margin">
+          <number>0</number>
+         </property>
+         <item>
+          <widget class="QTableWidget" name="tableWidget_strings">
+           <property name="frameShape">
+            <enum>QFrame::NoFrame</enum>
+           </property>
+           <property name="editTriggers">
+            <set>QAbstractItemView::NoEditTriggers</set>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_4">
+           <item>
+            <widget class="QPushButton" name="pushButton_find_string">
+             <property name="text">
+              <string/>
+             </property>
+             <property name="icon">
+              <iconset resource="resources/resources.qrc">
+               <normaloff>:/icons/find.png</normaloff>:/icons/find.png</iconset>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLineEdit" name="lineEdit_find_string"/>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <action name="actionOpen_Binary">
+   <property name="icon">
+    <iconset resource="resources/resources.qrc">
+     <normaloff>:/icons/file_open.png</normaloff>:/icons/file_open.png</iconset>
+   </property>
+   <property name="text">
+    <string>Open Binary</string>
+   </property>
+   <property name="shortcut">
+    <string>F3</string>
+   </property>
+  </action>
+  <action name="actionWrite_Binary">
+   <property name="icon">
+    <iconset resource="resources/resources.qrc">
+     <normaloff>:/icons/file_save.png</normaloff>:/icons/file_save.png</iconset>
+   </property>
+   <property name="text">
+    <string>Save Binary</string>
+   </property>
+  </action>
+  <action name="actionOpen_Workspace">
+   <property name="icon">
+    <iconset resource="resources/resources.qrc">
+     <normaloff>:/icons/x-sys_workspace_lila.png</normaloff>:/icons/x-sys_workspace_lila.png</iconset>
+   </property>
+   <property name="text">
+    <string>Open Workspace</string>
+   </property>
+  </action>
+  <action name="actionSave_Workspace">
+   <property name="icon">
+    <iconset resource="resources/resources.qrc">
+     <normaloff>:/icons/x-sys_workspace_save.png</normaloff>:/icons/x-sys_workspace_save.png</iconset>
+   </property>
+   <property name="text">
+    <string>Save Workspace</string>
+   </property>
+  </action>
+  <action name="actionNew_Disassembly">
+   <property name="icon">
+    <iconset resource="resources/resources.qrc">
+     <normaloff>:/icons/new_disasm_view3.png</normaloff>:/icons/new_disasm_view3.png</iconset>
+   </property>
+   <property name="text">
+    <string>New Disassembly</string>
+   </property>
+   <property name="shortcut">
+    <string>F7</string>
+   </property>
+  </action>
+  <action name="actionNew_Hexview">
+   <property name="icon">
+    <iconset resource="resources/resources.qrc">
+     <normaloff>:/icons/new_hex_view.png</normaloff>:/icons/new_hex_view.png</iconset>
+   </property>
+   <property name="text">
+    <string>New Hexview</string>
+   </property>
+  </action>
+  <action name="actionImports">
+   <property name="icon">
+    <iconset resource="resources/resources.qrc">
+     <normaloff>:/icons/import_small.png</normaloff>:/icons/import_small.png</iconset>
+   </property>
+   <property name="text">
+    <string>Imports</string>
+   </property>
+  </action>
+  <action name="actionExports">
+   <property name="text">
+    <string>Exports</string>
+   </property>
+  </action>
+  <action name="actionSymbols">
+   <property name="icon">
+    <iconset resource="resources/resources.qrc">
+     <normaloff>:/icons/symbol_small.png</normaloff>:/icons/symbol_small.png</iconset>
+   </property>
+   <property name="text">
+    <string>Symbols</string>
+   </property>
+  </action>
+  <action name="actionComments">
+   <property name="icon">
+    <iconset resource="resources/resources.qrc">
+     <normaloff>:/icons/comment_small.png</normaloff>:/icons/comment_small.png</iconset>
+   </property>
+   <property name="text">
+    <string>Comments</string>
+   </property>
+  </action>
+  <action name="actionNames">
+   <property name="icon">
+    <iconset resource="resources/resources.qrc">
+     <normaloff>:/icons/names_small.png</normaloff>:/icons/names_small.png</iconset>
+   </property>
+   <property name="text">
+    <string>Names</string>
+   </property>
+  </action>
+  <action name="actionTags">
+   <property name="icon">
+    <iconset resource="resources/resources.qrc">
+     <normaloff>:/icons/4stars_small.png</normaloff>:/icons/4stars_small.png</iconset>
+   </property>
+   <property name="text">
+    <string>Tags</string>
+   </property>
+  </action>
+  <action name="actionBookmarks">
+   <property name="icon">
+    <iconset resource="resources/resources.qrc">
+     <normaloff>:/icons/bookmarks.png</normaloff>:/icons/bookmarks.png</iconset>
+   </property>
+   <property name="text">
+    <string>Bookmarks</string>
+   </property>
+  </action>
+  <action name="actionVa">
+   <property name="icon">
+    <iconset resource="resources/resources.qrc">
+     <normaloff>:/icons/goto.png</normaloff>:/icons/goto.png</iconset>
+   </property>
+   <property name="text">
+    <string>VA</string>
+   </property>
+   <property name="toolTip">
+    <string>Goto Vitual Address</string>
+   </property>
+  </action>
+  <action name="actionFileOffset">
+   <property name="icon">
+    <iconset resource="resources/resources.qrc">
+     <normaloff>:/icons/goto.png</normaloff>:/icons/goto.png</iconset>
+   </property>
+   <property name="text">
+    <string>File Offset</string>
+   </property>
+   <property name="toolTip">
+    <string>Goto File Offset</string>
+   </property>
+  </action>
+  <action name="actionACSS">
+   <property name="icon">
+    <iconset resource="resources/resources.qrc">
+     <normaloff>:/icons/acss_1_small.png</normaloff>:/icons/acss_1_small.png</iconset>
+   </property>
+   <property name="text">
+    <string>ACSS Search</string>
+   </property>
+  </action>
+  <action name="actionWILDASM">
+   <property name="icon">
+    <iconset resource="resources/resources.qrc">
+     <normaloff>:/icons/wildasm2.png</normaloff>:/icons/wildasm2.png</iconset>
+   </property>
+   <property name="text">
+    <string>WildASM Search</string>
+   </property>
+   <property name="toolTip">
+    <string>WildASM Search</string>
+   </property>
+  </action>
+  <action name="actionASCIIZ_Strings">
+   <property name="icon">
+    <iconset resource="resources/resources.qrc">
+     <normaloff>:/icons/strings_small.png</normaloff>:/icons/strings_small.png</iconset>
+   </property>
+   <property name="text">
+    <string>ASCIIZ Strings</string>
+   </property>
+  </action>
+  <action name="actionUNICODE_Strings">
+   <property name="text">
+    <string>UNICODE Strings</string>
+   </property>
+  </action>
+  <action name="actionAbout_re_view">
+   <property name="icon">
+    <iconset resource="resources/resources.qrc">
+     <normaloff>:/icons/gtk-info.png</normaloff>:/icons/gtk-info.png</iconset>
+   </property>
+   <property name="text">
+    <string>About re|view</string>
+   </property>
+  </action>
+  <action name="actionExit">
+   <property name="icon">
+    <iconset resource="resources/resources.qrc">
+     <normaloff>:/icons/exit.png</normaloff>:/icons/exit.png</iconset>
+   </property>
+   <property name="text">
+    <string>Exit</string>
+   </property>
+  </action>
+  <action name="actionDisassemble">
+   <property name="text">
+    <string>Disassemble</string>
+   </property>
+  </action>
+  <action name="actionRE_View_Help">
+   <property name="icon">
+    <iconset resource="resources/resources.qrc">
+     <normaloff>:/icons/help-contents.png</normaloff>:/icons/help-contents.png</iconset>
+   </property>
+   <property name="text">
+    <string>re|view Help</string>
+   </property>
+  </action>
+  <action name="actionClose_Workspace">
+   <property name="text">
+    <string>Close Workspace</string>
+   </property>
+  </action>
+  <action name="actionSegment_offset">
+   <property name="icon">
+    <iconset resource="resources/resources.qrc">
+     <normaloff>:/icons/goto.png</normaloff>:/icons/goto.png</iconset>
+   </property>
+   <property name="text">
+    <string>Segment Offset</string>
+   </property>
+   <property name="toolTip">
+    <string>Goto Segment Offset</string>
+   </property>
+  </action>
+  <action name="actionCrypto_Scan">
+   <property name="text">
+    <string>Crypto Scan</string>
+   </property>
+  </action>
+  <action name="actionOverview">
+   <property name="icon">
+    <iconset resource="resources/resources.qrc">
+     <normaloff>:/logos/rs_general_logo_big.png</normaloff>:/logos/rs_general_logo_big.png</iconset>
+   </property>
+   <property name="text">
+    <string>Overview</string>
+   </property>
+  </action>
+  <action name="actionNotes">
+   <property name="icon">
+    <iconset resource="resources/resources.qrc">
+     <normaloff>:/icons/notes_4.png</normaloff>:/icons/notes_4.png</iconset>
+   </property>
+   <property name="text">
+    <string>Notes</string>
+   </property>
+  </action>
+  <action name="actionLog">
+   <property name="icon">
+    <iconset resource="resources/resources.qrc">
+     <normaloff>:/icons/notes_2.png</normaloff>:/icons/notes_2.png</iconset>
+   </property>
+   <property name="text">
+    <string>Log</string>
+   </property>
+  </action>
+  <action name="actionEditor">
+   <property name="icon">
+    <iconset resource="resources/resources.qrc">
+     <normaloff>:/icons/x-sys_action.png</normaloff>:/icons/x-sys_action.png</iconset>
+   </property>
+   <property name="text">
+    <string>re|script Editor</string>
+   </property>
+   <property name="toolTip">
+    <string>re|script Editor</string>
+   </property>
+  </action>
+  <action name="actionRun_Script">
+   <property name="icon">
+    <iconset resource="resources/resources.qrc">
+     <normaloff>:/icons/re_script_run3.png</normaloff>:/icons/re_script_run3.png</iconset>
+   </property>
+   <property name="text">
+    <string>Run Script ...</string>
+   </property>
+  </action>
+  <action name="actionFull_Analysis">
+   <property name="icon">
+    <iconset resource="resources/resources.qrc">
+     <normaloff>:/icons/disasm1_small.png</normaloff>:/icons/disasm1_small.png</iconset>
+   </property>
+   <property name="text">
+    <string>Full Analysis</string>
+   </property>
+   <property name="shortcut">
+    <string>F5</string>
+   </property>
+  </action>
+  <action name="actionShow_Fullscreen">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="resources/resources.qrc">
+     <normaloff>:/icons/fullscreen.png</normaloff>:/icons/fullscreen.png</iconset>
+   </property>
+   <property name="text">
+    <string>Show Fullscreen</string>
+   </property>
+  </action>
+  <action name="actionNew_Hexview_Window">
+   <property name="icon">
+    <iconset resource="resources/resources.qrc">
+     <normaloff>:/icons/new_dhex_view_win.png</normaloff>:/icons/new_dhex_view_win.png</iconset>
+   </property>
+   <property name="text">
+    <string>New Hexview Window</string>
+   </property>
+  </action>
+  <action name="actionNew_Disassembly_Window">
+   <property name="icon">
+    <iconset resource="resources/resources.qrc">
+     <normaloff>:/icons/new_disasm_view_win.png</normaloff>:/icons/new_disasm_view_win.png</iconset>
+   </property>
+   <property name="text">
+    <string>New Disassembly Window</string>
+   </property>
+  </action>
+  <action name="actionManage_plugins">
+   <property name="icon">
+    <iconset resource="resources/resources.qrc">
+     <normaloff>:/icons/plugin_lila2.png</normaloff>:/icons/plugin_lila2.png</iconset>
+   </property>
+   <property name="text">
+    <string>Manage plugins</string>
+   </property>
+  </action>
+  <action name="actionRe_view_Config">
+   <property name="icon">
+    <iconset resource="resources/resources.qrc">
+     <normaloff>:/icons/configuration2.png</normaloff>:/icons/configuration2.png</iconset>
+   </property>
+   <property name="text">
+    <string>re|view Config</string>
+   </property>
+  </action>
+  <action name="actionSave_Binary_as">
+   <property name="icon">
+    <iconset resource="resources/resources.qrc">
+     <normaloff>:/icons/file_save_as2.png</normaloff>:/icons/file_save_as2.png</iconset>
+   </property>
+   <property name="text">
+    <string>Save Binary as ...</string>
+   </property>
+  </action>
+  <action name="actionSave_Workspace_as">
+   <property name="icon">
+    <iconset resource="resources/resources.qrc">
+     <normaloff>:/icons/x-sys_workspace_save_as2.png</normaloff>:/icons/x-sys_workspace_save_as2.png</iconset>
+   </property>
+   <property name="text">
+    <string>Save Workspace as ...</string>
+   </property>
+  </action>
+  <action name="actionUndo">
+   <property name="icon">
+    <iconset resource="resources/resources.qrc">
+     <normaloff>:/icons/undo3.png</normaloff>:/icons/undo3.png</iconset>
+   </property>
+   <property name="text">
+    <string>Undo</string>
+   </property>
+  </action>
+  <action name="actionRedo">
+   <property name="icon">
+    <iconset resource="resources/resources.qrc">
+     <normaloff>:/icons/redo3.png</normaloff>:/icons/redo3.png</iconset>
+   </property>
+   <property name="text">
+    <string>Redo</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="resources/resources.qrc"/>
+ </resources>
+ <connections/>
+</ui>
