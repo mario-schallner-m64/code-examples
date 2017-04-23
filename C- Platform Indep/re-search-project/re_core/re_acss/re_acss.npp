@@ -1,0 +1,12 @@
+<NotepadPlus>
+    <Session activeView="1">
+        <mainView activeIndex="1">
+            <File firstVisibleLine="0" xOffset="0" startPos="0" endPos="0" lang="C++">F:\_mario\_prog\re_search_project\src\re_core\re_acss\re_acss_compiler.cpp</File>
+            <File firstVisibleLine="0" xOffset="0" startPos="0" endPos="0" lang="C++">F:\_mario\_prog\re_search_project\src\re_core\re_acss\re_acss_expression.cpp</File>
+        </mainView>
+        <subView activeIndex="1">
+            <File firstVisibleLine="0" xOffset="0" startPos="0" endPos="0" lang="C++">F:\_mario\_prog\re_search_project\src\re_core\re_acss\re_acss_expression.h</File>
+            <File firstVisibleLine="0" xOffset="0" startPos="0" endPos="0" lang="C++">F:\_mario\_prog\re_search_project\src\re_core\re_acss\re_acss_compiler.h</File>
+        </subView>
+    </Session>
+</NotepadPlus>

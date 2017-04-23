@@ -1,0 +1,30 @@
+<NotepadPlus>
+    <Session activeView="1">
+        <mainView activeIndex="9">
+            <File firstVisibleLine="0" xOffset="0" startPos="0" endPos="0" lang="C++">F:\_mario\_prog\re_search_project\src\re_core\re_core.cpp</File>
+            <File firstVisibleLine="0" xOffset="0" startPos="0" endPos="0" lang="C++">F:\_mario\_prog\re_search_project\src\re_core\re_address_space.cpp</File>
+            <File firstVisibleLine="0" xOffset="0" startPos="0" endPos="0" lang="C++">F:\_mario\_prog\re_search_project\src\re_core\re_disassembler.cpp</File>
+            <File firstVisibleLine="0" xOffset="0" startPos="0" endPos="0" lang="C++">F:\_mario\_prog\re_search_project\src\re_core\re_file.cpp</File>
+            <File firstVisibleLine="0" xOffset="0" startPos="0" endPos="0" lang="C++">F:\_mario\_prog\re_search_project\src\re_core\re_file_elf32.cpp</File>
+            <File firstVisibleLine="0" xOffset="0" startPos="0" endPos="0" lang="C++">F:\_mario\_prog\re_search_project\src\re_core\re_file_pe32.cpp</File>
+            <File firstVisibleLine="0" xOffset="0" startPos="0" endPos="0" lang="C++">F:\_mario\_prog\re_search_project\src\re_core\re_file_raw32.cpp</File>
+            <File firstVisibleLine="0" xOffset="0" startPos="0" endPos="0" lang="C++">F:\_mario\_prog\re_search_project\src\re_core\re_logger.cpp</File>
+            <File firstVisibleLine="0" xOffset="0" startPos="0" endPos="0" lang="C++">F:\_mario\_prog\re_search_project\src\re_core\re_pe.h</File>
+            <File firstVisibleLine="0" xOffset="0" startPos="0" endPos="0" lang="C++">F:\_mario\_prog\re_search_project\src\re_core\re_target.cpp</File>
+        </mainView>
+        <subView activeIndex="11">
+            <File firstVisibleLine="0" xOffset="0" startPos="0" endPos="0" lang="C++">F:\_mario\_prog\re_search_project\src\re_core\re_address_space.h</File>
+            <File firstVisibleLine="0" xOffset="0" startPos="0" endPos="0" lang="C++">F:\_mario\_prog\re_search_project\src\re_core\re_core.h</File>
+            <File firstVisibleLine="0" xOffset="0" startPos="0" endPos="0" lang="C++">F:\_mario\_prog\re_search_project\src\re_core\re_core_global.h</File>
+            <File firstVisibleLine="0" xOffset="0" startPos="0" endPos="0" lang="C++">F:\_mario\_prog\re_search_project\src\re_core\re_disassembler.h</File>
+            <File firstVisibleLine="0" xOffset="0" startPos="0" endPos="0" lang="C++">F:\_mario\_prog\re_search_project\src\re_core\re_elf.h</File>
+            <File firstVisibleLine="0" xOffset="0" startPos="0" endPos="0" lang="C++">F:\_mario\_prog\re_search_project\src\re_core\re_file.h</File>
+            <File firstVisibleLine="0" xOffset="0" startPos="0" endPos="0" lang="C++">F:\_mario\_prog\re_search_project\src\re_core\re_file_elf32.h</File>
+            <File firstVisibleLine="0" xOffset="0" startPos="0" endPos="0" lang="C++">F:\_mario\_prog\re_search_project\src\re_core\re_file_pe32.h</File>
+            <File firstVisibleLine="0" xOffset="0" startPos="0" endPos="0" lang="C++">F:\_mario\_prog\re_search_project\src\re_core\re_file_raw32.h</File>
+            <File firstVisibleLine="0" xOffset="0" startPos="0" endPos="0" lang="C++">F:\_mario\_prog\re_search_project\src\re_core\re_logger.h</File>
+            <File firstVisibleLine="0" xOffset="0" startPos="0" endPos="0" lang="C++">F:\_mario\_prog\re_search_project\src\re_core\re_target.h</File>
+            <File firstVisibleLine="0" xOffset="0" startPos="704" endPos="704" lang="C++">F:\_mario\_prog\re_search_project\src\re_core\re_types.h</File>
+        </subView>
+    </Session>
+</NotepadPlus>
