@@ -1,0 +1,10 @@
+// filter example 6
+// evil calls II
+
+1 x insn {
+    type == push;
+};
+        
+1 x insn {
+    type == return;
+};

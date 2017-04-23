@@ -1,0 +1,8 @@
+// filter example 4
+// nop blocks
+
+block { size=150, threshold=10%; };
+
+1 x insn {
+    type == nop;
+};

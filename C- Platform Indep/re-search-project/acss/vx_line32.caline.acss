@@ -1,0 +1,1 @@
+3 x insn {group==stack;}; 1 x insn { type == call; }; 2 x insn { group==stack;};

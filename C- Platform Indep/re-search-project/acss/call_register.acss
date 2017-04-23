@@ -1,0 +1,6 @@
+// filter example 4
+
+1 x insn {
+    op1_type == register, op1_access == (&execute);
+};
+        

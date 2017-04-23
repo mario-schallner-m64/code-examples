@@ -1,0 +1,9 @@
+// filter example 2
+
+4-8 x insn {
+    group == move,
+    op2_type == immediate,
+    op2_datatype == dword;
+};
+    
+1 x insn { type == call; };

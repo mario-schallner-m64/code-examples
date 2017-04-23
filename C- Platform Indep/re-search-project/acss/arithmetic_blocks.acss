@@ -1,0 +1,8 @@
+// filter example 
+// arithmetic blocks
+
+block { size=200, threshold=10%; };
+
+1 x insn {
+    group == arithmetic;
+};

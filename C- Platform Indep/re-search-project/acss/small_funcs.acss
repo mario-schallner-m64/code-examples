@@ -1,0 +1,34 @@
+// filter example 5
+// find small functions allocating local variables
+
+1 x insn {
+    type == push,
+    op1_type == register, op1_reg_name == ebp;
+};
+
+
+1 x insn {
+    type == mov,
+    op2_type == register, op2_reg_name == esp;
+};
+
+1 x insn {
+    type == sub,
+    op1_type == register, op1_reg_name == esp;
+
+    // find sub esp, ...  OR  
+    //      and esp, ...
+
+    type == and,
+    op1_type == register, op1_reg_name == esp;
+};
+
+
+1-200 x insn {
+    type == ANY;
+};
+
+
+1 x insn {
+    type == return;	// return
+};

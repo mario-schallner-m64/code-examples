@@ -1,0 +1,6 @@
+// filter example 3
+// nop zones
+
+2-200 x insn {
+    type == nop;
+};
