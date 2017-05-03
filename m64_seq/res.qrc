@@ -1,0 +1,16 @@
+<RCC>
+    <qresource prefix="/images">
+        <file>res/step_16_16_4_off.png</file>
+        <file>res/step_16_16_off.png</file>
+        <file>res/step_16_16_on.png</file>
+        <file>res/step_16_16_on2.png</file>
+        <file>res/nintendo_mario.png</file>
+        <file>res/step_16_play.png</file>
+        <file>res/step_16_play2.png</file>
+        <file>res/settings.png</file>
+        <file>res/disk.jpg</file>
+        <file>res/m64_new1.png</file>
+        <file>res/m64_new2.png</file>
+        <file>res/m64_new3.png</file>
+    </qresource>
+</RCC>
