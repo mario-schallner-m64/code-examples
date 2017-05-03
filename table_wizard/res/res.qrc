@@ -1,0 +1,14 @@
+<RCC>
+    <qresource prefix="/icons">
+        <file>rb_studio_48.ico</file>
+        <file>rb_studio_48.png</file>
+        <file>rb_del_24.png</file>
+        <file>rb_dup_24.png</file>
+        <file>rb_new_24.png</file>
+        <file>gnome-dev-floppy.png</file>
+        <file>gnome-fs-directory-accept.png</file>
+        <file>rb_load_24.png</file>
+        <file>rb_save_24.png</file>
+        <file>run_c64_46x19.png</file>
+    </qresource>
+</RCC>
